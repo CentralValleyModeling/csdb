@@ -1,0 +1,2251 @@
+I_ALD002:
+  name: Alder Creek (below Alder Creek Diversion Dam)
+  code_name: I_ALD002
+  kind: SV - Inflow
+  units: cfs
+I_ALD004:
+  name: Alder Creek (at Proposed Site of Alder Creek Reservoir)
+  code_name: I_ALD004
+  kind: SV - Inflow
+  units: cfs
+I_ALMNR:
+  name: Inflow to Lake Almanor
+  code_name: I_ALMNR
+  kind: SV - Inflow
+  units: cfs
+I_ALOHA:
+  name: Pyramid Creek inflow to Lake Aloha
+  code_name: I_ALOHA
+  kind: SV - Inflow
+  units: cfs
+I_AMADR:
+  name: Jackson Creek inflow to Jackson Reservoir
+  code_name: I_AMADR
+  kind: SV - Inflow
+  units: cfs
+I_ANG017:
+  name: Angel Creek inflows to Murphys Afterbay
+  code_name: I_ANG017
+  kind: SV - Inflow
+  units: cfs
+I_ANT011:
+  name: Antelope Creek
+  code_name: I_ANT011
+  kind: SV - Inflow
+  units: cfs
+I_ANTLP:
+  name: Inflow to  Antelope Lake
+  code_name: I_ANTLP
+  kind: SV - Inflow
+  units: cfs
+I_BANOS:
+  name: Los Banos Creek inflows to Los Banos Reservoir
+  code_name: I_BANOS
+  kind: SV - Inflow
+  units: cfs
+I_BCC014:
+  name: Big Chico Creek
+  code_name: I_BCC014
+  kind: SV - Inflow
+  units: cfs
+I_BCK040:
+  name: Bear Creek inflows to Bear Reservoir (Merced County)
+  code_name: I_BCK040
+  kind: SV - Inflow
+  units: cfs
+I_BCN010:
+  name: Bear Creek (Tributary to Sacramento River)
+  code_name: I_BCN010
+  kind: SV - Inflow
+  units: cfs
+I_BEARD:
+  name: Inflow to Beardsley Lake
+  code_name: I_BEARD
+  kind: SV - Inflow
+  units: cfs
+I_BLKBT:
+  name: Local inflow to Black Butte Resrvoir
+  code_name: I_BLKBT
+  kind: SV - Inflow
+  units: cfs
+I_BOWMN:
+  name: Local inflow to Bowman Lake
+  code_name: I_BOWMN
+  kind: SV - Inflow
+  units: cfs
+I_BRC003:
+  name: Local inflows to Cache Creek from Bear Creek
+  code_name: I_BRC003
+  kind: SV - Inflow
+  units: cfs
+I_BRR023:
+  name: Local inflow to Garden Bar Dam Site
+  code_name: I_BRR023
+  kind: SV - Inflow
+  units: cfs
+I_BSH003:
+  name: Brush Creek inflow to Brush Creek Reservoir
+  code_name: I_BSH003
+  kind: SV - Inflow
+  units: cfs
+I_BTC048:
+  name: Butte Creek inflow to Battle Creek
+  code_name: I_BTC048
+  kind: SV - Inflow
+  units: cfs
+I_BTL006:
+  name: Battle Creek
+  code_name: I_BTL006
+  kind: SV - Inflow
+  units: cfs
+I_BTVLY:
+  name: Inflow to Butt Valley Reservoir
+  code_name: I_BTVLY
+  kind: SV - Inflow
+  units: cfs
+I_BUCKS:
+  name: Bucks Creek inflow to Lower Bucks Creek Reservoir
+  code_name: I_BUCKS
+  kind: SV - Inflow
+  units: cfs
+I_BUR005:
+  name: Burns Creek
+  code_name: I_BUR005
+  kind: SV - Inflow
+  units: cfs
+I_BVC007:
+  name: Beaver Creek inflows upstream of Beaver Creek Diversion Dam
+  code_name: I_BVC007
+  kind: SV - Inflow
+  units: cfs
+I_CAP000:
+  name: Capita Canyon and minor streams
+  code_name: I_CAP000
+  kind: SV - Inflow
+  units: cfs
+I_CAPLS:
+  name: Inflow to Caples Lake
+  code_name: I_CAPLS
+  kind: SV - Inflow
+  units: cfs
+I_CCH053:
+  name: Local inflows to Cache Creek downstream of Rumsey
+  code_name: I_CCH053
+  kind: SV - Inflow
+  units: cfs
+I_CFS001:
+  name: Clark Fork Stanislaus River inflows to Middle Fork Stanislaus
+  code_name: I_CFS001
+  kind: SV - Inflow
+  units: cfs
+I_CHC000:
+  name: Corral Hollow and minor creeks
+  code_name: I_CHC000
+  kind: SV - Inflow
+  units: cfs
+I_CHW031:
+  name: Local inflow to Chowchilla River below Buchanan Dam
+  code_name: I_CHW031
+  kind: SV - Inflow
+  units: cfs
+I_CLR011:
+  name: Local inflows to Clear Creek at Igo
+  code_name: I_CLR011
+  kind: SV - Inflow
+  units: cfs
+I_CLRLK:
+  name: Cache Creek inflow to Clear Lake
+  code_name: I_CLRLK
+  kind: SV - Inflow
+  units: cfs
+I_CLV026:
+  name: Local inflow to Calaveras River at Bellota Weir
+  code_name: I_CLV026
+  kind: SV - Inflow
+  units: cfs
+I_CMBIE:
+  name: Local inflow to Combie Reservoir
+  code_name: I_CMBIE
+  kind: SV - Inflow
+  units: cfs
+I_CMCHE:
+  name: Local inflow to Camanche Reservoir
+  code_name: I_CMCHE
+  kind: SV - Inflow
+  units: cfs
+I_CMP001:
+  name: Local inflows Camp Creek below Sly Park Creek Confluence
+  code_name: I_CMP001
+  kind: SV - Inflow
+  units: cfs
+I_CMP014:
+  name: Camp Creek
+  code_name: I_CMP014
+  kind: SV - Inflow
+  units: cfs
+I_CMPFW:
+  name: Local inflow to Camp Far West Reservoir
+  code_name: I_CMPFW
+  kind: SV - Inflow
+  units: cfs
+I_COL003:
+  name: Cole Creek
+  code_name: I_COL003
+  kind: SV - Inflow
+  units: cfs
+I_COT033:
+  name: Cottonwood Creek
+  code_name: I_COT033
+  kind: SV - Inflow
+  units: cfs
+I_COW014:
+  name: Cow Creek
+  code_name: I_COW014
+  kind: SV - Inflow
+  units: cfs
+I_CSM035:
+  name: Cosumnes River
+  code_name: I_CSM035
+  kind: SV - Inflow
+  units: cfs
+I_CWD018:
+  name: North and Middle Forks Cottonwood Creek (Near Olinda)
+  code_name: I_CWD018
+  kind: SV - Inflow
+  units: cfs
+I_CYN009:
+  name: Inflow to Canyon Creek at Towle Canal Diversion Dam
+  code_name: I_CYN009
+  kind: SV - Inflow
+  units: cfs
+I_DAVIS:
+  name: Inflow to Davis Lake
+  code_name: I_DAVIS
+  kind: SV - Inflow
+  units: cfs
+I_DBC024:
+  name: Dry Creek and Berenda Creek
+  code_name: I_DBC024
+  kind: SV - Inflow
+  units: cfs
+I_DCC010:
+  name: Duncan Canyon Creek
+  code_name: I_DCC010
+  kind: SV - Inflow
+  units: cfs
+I_DCM027:
+  name: Dry Creek (Merced)
+  code_name: I_DCM027
+  kind: SV - Inflow
+  units: cfs
+I_DCT050:
+  name: Dry Creek (Tuolumne)
+  code_name: I_DCT050
+  kind: SV - Inflow
+  units: cfs
+I_DED044:
+  name: Deadman and Dutchman Creeks
+  code_name: I_DED044
+  kind: SV - Inflow
+  units: cfs
+I_DEE023:
+  name: Dear Creek (inflow to Consumnes)
+  code_name: I_DEE023
+  kind: SV - Inflow
+  units: cfs
+I_DER001:
+  name: Local inflow to Deer Creek near Smartville
+  code_name: I_DER001
+  kind: SV - Inflow
+  units: cfs
+I_DER004:
+  name: Local inflow to Deer Creek at Lake Wildwood
+  code_name: I_DER004
+  kind: SV - Inflow
+  units: cfs
+I_DHC021:
+  name: Dry Creek and Hutchinson Creek
+  code_name: I_DHC021
+  kind: SV - Inflow
+  units: cfs
+I_DONLL:
+  name: Inflow to Donnells Lake
+  code_name: I_DONLL
+  kind: SV - Inflow
+  units: cfs
+I_DPC008:
+  name: Del Puerto Creek
+  code_name: I_DPC008
+  kind: SV - Inflow
+  units: cfs
+I_DRC012:
+  name: Deer Creek near Vina
+  code_name: I_DRC012
+  kind: SV - Inflow
+  units: cfs
+I_DSC035:
+  name: Dry Creek and Secret Creek
+  code_name: I_DSC035
+  kind: SV - Inflow
+  units: cfs
+I_EBF001:
+  name: Local inflow to East Branch NF Feather River below Antelope Lake
+  code_name: I_EBF001
+  kind: SV - Inflow
+  units: cfs
+I_ECHOL:
+  name: Echo Lake
+  code_name: I_ECHOL
+  kind: SV - Inflow
+  units: cfs
+I_ELD027:
+  name: Elder Creek
+  code_name: I_ELD027
+  kind: SV - Inflow
+  units: cfs
+I_ELENR:
+  name: Inflow to Lake Eleanor
+  code_name: I_ELENR
+  kind: SV - Inflow
+  units: cfs
+I_ENGLB:
+  name: Local inflow to Englebright Reservoir
+  code_name: I_ENGLB
+  kind: SV - Inflow
+  units: cfs
+I_EPARK:
+  name: Stony Creek inflow to East Park Dam
+  code_name: I_EPARK
+  kind: SV - Inflow
+  units: cfs
+I_ESTMN:
+  name: Chowchilla River inflows to Eastman Lake
+  code_name: I_ESTMN
+  kind: SV - Inflow
+  units: cfs
+I_FOLSM:
+  name: Local inflow to Folsom Lake
+  code_name: I_FOLSM
+  kind: SV - Inflow
+  units: cfs
+I_FRDYC:
+  name: Inflow to Fordyce Lake
+  code_name: I_FRDYC
+  kind: SV - Inflow
+  units: cfs
+I_FRMAN:
+  name: Frenchman Lake inflows
+  code_name: I_FRMAN
+  kind: SV - Inflow
+  units: cfs
+I_FRMDW:
+  name: Inflow to French Meadows Reservoir
+  code_name: I_FRMDW
+  kind: SV - Inflow
+  units: cfs
+I_FRNCH:
+  name: Inflow to French Lake
+  code_name: I_FRNCH
+  kind: SV - Inflow
+  units: cfs
+I_FRS046:
+  name: Local inflow to Fresno River below Hidden Dam near Daulton
+  code_name: I_FRS046
+  kind: SV - Inflow
+  units: cfs
+I_FSL012:
+  name: Fresno Slough
+  code_name: I_FSL012
+  kind: SV - Inflow
+  units: cfs
+I_GERLE:
+  name: Local inflow to Gerle Reservoir
+  code_name: I_GERLE
+  kind: SV - Inflow
+  units: cfs
+I_GRZ012:
+  name: Garzas Creek
+  code_name: I_GRZ012
+  kind: SV - Inflow
+  units: cfs
+I_GZL009:
+  name: Local inflow to Grizzly Creek upstream of Grizzly Forebay
+  code_name: I_GZL009
+  kind: SV - Inflow
+  units: cfs
+I_HHOLE:
+  name: Local inflow to Hell Hole Reservoir
+  code_name: I_HHOLE
+  kind: SV - Inflow
+  units: cfs
+I_HNSLY:
+  name: Fresno River inflows to Hensley Lake
+  code_name: I_HNSLY
+  kind: SV - Inflow
+  units: cfs
+I_HON021:
+  name: Honcut Creek
+  code_name: I_HON021
+  kind: SV - Inflow
+  units: cfs
+I_HTCHY:
+  name: Inflow To Hetch Hetchy Reservoir
+  code_name: I_HTCHY
+  kind: SV - Inflow
+  units: cfs
+I_ICEHS:
+  name: Inflow to Ice House Reservoir
+  code_name: I_ICEHS
+  kind: SV - Inflow
+  units: cfs
+I_INDVL:
+  name: NF Cache Creek inflow to Indian Valley Reservoir
+  code_name: I_INDVL
+  kind: SV - Inflow
+  units: cfs
+I_ING008:
+  name: Hospital and Ingram Creeks
+  code_name: I_ING008
+  kind: SV - Inflow
+  units: cfs
+I_JBP006:
+  name: James Bypass
+  code_name: I_JBP006
+  kind: SV - Inflow
+  units: cfs
+I_JKSMD:
+  name: Inflow to Jackson Meadows
+  code_name: I_JKSMD
+  kind: SV - Inflow
+  units: cfs
+I_JNKSN:
+  name: Sly Park Creek and Hazel Creek inflow to Jenkinson Lake
+  code_name: I_JNKSN
+  kind: SV - Inflow
+  units: cfs
+I_LCBRF:
+  name: Texas, Fall, and Rucker Creeks
+  code_name: I_LCBRF
+  kind: SV - Inflow
+  units: cfs
+I_LCC038:
+  name: Little Chico Creek
+  code_name: I_LCC038
+  kind: SV - Inflow
+  units: cfs
+I_LDC029:
+  name: Little Dry Creek
+  code_name: I_LDC029
+  kind: SV - Inflow
+  units: cfs
+I_LGRSV:
+  name: South Fork Feather River
+  code_name: I_LGRSV
+  kind: SV - Inflow
+  units: cfs
+I_LJC022:
+  name: Littlejohns Creek
+  code_name: I_LJC022
+  kind: SV - Inflow
+  units: cfs
+I_LKVLY:
+  name: Inflow to Lake Valley Reservoir (NF American River)
+  code_name: I_LKVLY
+  kind: SV - Inflow
+  units: cfs
+I_LLOYD:
+  name: Inflow to Lake Lloyd/Cherry Lake
+  code_name: I_LLOYD
+  kind: SV - Inflow
+  units: cfs
+I_LNG012:
+  name: Local inflow to Long Canyon Creek
+  code_name: I_LNG012
+  kind: SV - Inflow
+  units: cfs
+I_LOONL:
+  name: Inflow to Loon Lake
+  code_name: I_LOONL
+  kind: SV - Inflow
+  units: cfs
+I_LOSVQ:
+  name: Kellogg Creek Inflow to Los Vaqueros Reservoir
+  code_name: I_LOSVQ
+  kind: SV - Inflow
+  units: cfs
+I_LPC007:
+  name: Little Panoche Creek
+  code_name: I_LPC007
+  kind: SV - Inflow
+  units: cfs
+I_LRB004:
+  name: Little Rubicon River inflow to Buck Island Lake
+  code_name: I_LRB004
+  kind: SV - Inflow
+  units: cfs
+I_LWSTN:
+  name: Local inflow to Lewiston Reservoir
+  code_name: I_LWSTN
+  kind: SV - Inflow
+  units: cfs
+I_LYONS:
+  name: Inflow to Lyons Reservoir
+  code_name: I_LYONS
+  kind: SV - Inflow
+  units: cfs
+I_MCD055:
+  name: Local inflow to Merced River at Merced Falls Diversion Dam
+  code_name: I_MCD055
+  kind: SV - Inflow
+  units: cfs
+I_MCLRE:
+  name: Local inflow to Lake McClure
+  code_name: I_MCLRE
+  kind: SV - Inflow
+  units: cfs
+I_MERLC:
+  name: French Dry Creek inflow to Merle Collins Lake
+  code_name: I_MERLC
+  kind: SV - Inflow
+  units: cfs
+I_MFA001:
+  name: Local inflow to Middle Fork American River near Auburn
+  code_name: I_MFA001
+  kind: SV - Inflow
+  units: cfs
+I_MFA023:
+  name: Local inflow to Middle Fork American River near Foresthill
+  code_name: I_MFA023
+  kind: SV - Inflow
+  units: cfs
+I_MFA025:
+  name: Local inflow to Middle Fork American River
+  code_name: I_MFA025
+  kind: SV - Inflow
+  units: cfs
+I_MFA036:
+  name: Local inflow to Middle Fork American River at Interbay Dam
+  code_name: I_MFA036
+  kind: SV - Inflow
+  units: cfs
+I_MFF019:
+  name: Local inflow to Middle Fork Feather River near Merrimac
+  code_name: I_MFF019
+  kind: SV - Inflow
+  units: cfs
+I_MFF087:
+  name: Local inflow to Middle Fork Feather River near Portola
+  code_name: I_MFF087
+  kind: SV - Inflow
+  units: cfs
+I_MFM008:
+  name: Middle Fork Mokelumne River
+  code_name: I_MFM008
+  kind: SV - Inflow
+  units: cfs
+I_MFS013:
+  name: Local Inflow to MF Stanislaus River at Sand Bar Diversion Dam
+  code_name: I_MFS013
+  kind: SV - Inflow
+  units: cfs
+I_MFS022:
+  name: Local inflow to MF Stanislaus River above Hells Half Acre Bridge
+  code_name: I_MFS022
+  kind: SV - Inflow
+  units: cfs
+I_MFS047:
+  name: Kennedy Creek Inflow to MF Stanislaus River
+  code_name: I_MFS047
+  kind: SV - Inflow
+  units: cfs
+I_MFY013:
+  name: Local inflow to MF Yuba River
+  code_name: I_MFY013
+  kind: SV - Inflow
+  units: cfs
+I_MIL003:
+  name: Mills Creek
+  code_name: I_MIL003
+  kind: SV - Inflow
+  units: cfs
+I_MLC006:
+  name: Mill Creek
+  code_name: I_MLC006
+  kind: SV - Inflow
+  units: cfs
+I_MLRTN:
+  name: San Joaquin River inflows to Millerton Reservoir
+  code_name: I_MLRTN
+  kind: SV - Inflow
+  units: cfs
+I_MNS000:
+  name: Inflows from Minor North-East Streams to Sacramento River
+  code_name: I_MNS000
+  kind: SV - Inflow
+  units: cfs
+I_MOK079:
+  name: Local Inflow to Mokelumne River above Pardee Reservoir
+  code_name: I_MOK079
+  kind: SV - Inflow
+  units: cfs
+I_MPS038:
+  name: Mariposa Creek
+  code_name: I_MPS038
+  kind: SV - Inflow
+  units: cfs
+I_MSH015:
+  name: Marsh Creek inflows to the Delta
+  code_name: I_MSH015
+  kind: SV - Inflow
+  units: cfs
+I_MTMDW:
+  name: Inflow to Mountain Meadows Reservoir
+  code_name: I_MTMDW
+  kind: SV - Inflow
+  units: cfs
+I_NBLDB:
+  name: Local inflow to New Bullards Bar Reservoir
+  code_name: I_NBLDB
+  kind: SV - Inflow
+  units: cfs
+I_NFA016:
+  name: Local inflow to NF American River at Auburn Tunnel Pump Station Diversion
+  code_name: I_NFA016
+  kind: SV - Inflow
+  units: cfs
+I_NFA022:
+  name: Local inflow to NF American River at North Fork Dam
+  code_name: I_NFA022
+  kind: SV - Inflow
+  units: cfs
+I_NFA054:
+  name: North Fork American River
+  code_name: I_NFA054
+  kind: SV - Inflow
+  units: cfs
+I_NFF029:
+  name: Local inflow to NF Feather River above Poe Dam
+  code_name: I_NFF029
+  kind: SV - Inflow
+  units: cfs
+I_NFM010:
+  name: Local Inflow to NF Mokelumne River
+  code_name: I_NFM010
+  kind: SV - Inflow
+  units: cfs
+I_NFS005:
+  name: Local inflow to NF Stanislaus River below Beaver Creek
+  code_name: I_NFS005
+  kind: SV - Inflow
+  units: cfs
+I_NFS009:
+  name: Local inflow to NF Stanislaus River near Avery
+  code_name: I_NFS009
+  kind: SV - Inflow
+  units: cfs
+I_NFS033:
+  name: North Fork Stanislaus River
+  code_name: I_NFS033
+  kind: SV - Inflow
+  units: cfs
+I_NFY029:
+  name: North Fork Yuba River and local inflows
+  code_name: I_NFY029
+  kind: SV - Inflow
+  units: cfs
+I_NHGAN:
+  name: Calaveras River inflows to New Hogan Dam
+  code_name: I_NHGAN
+  kind: SV - Inflow
+  units: cfs
+I_NLC003:
+  name: North Fork of Long Canyon Creek
+  code_name: I_NLC003
+  kind: SV - Inflow
+  units: cfs
+I_NMA003:
+  name: North Fork of Middle Fork American River
+  code_name: I_NMA003
+  kind: SV - Inflow
+  units: cfs
+I_NNA013:
+  name: Local inflow to NF American River
+  code_name: I_NNA013
+  kind: SV - Inflow
+  units: cfs
+I_OGN005:
+  name: Oregon Creek
+  code_name: I_OGN005
+  kind: SV - Inflow
+  units: cfs
+I_ORG000:
+  name: Ortigalita Creek
+  code_name: I_ORG000
+  kind: SV - Inflow
+  units: cfs
+I_OROVL:
+  name: Local inflow to Lake Oroville
+  code_name: I_OROVL
+  kind: SV - Inflow
+  units: cfs
+I_ORT014:
+  name: Orestimba Creek
+  code_name: I_ORT014
+  kind: SV - Inflow
+  units: cfs
+I_OWN040:
+  name: Owens Creek
+  code_name: I_OWN040
+  kind: SV - Inflow
+  units: cfs
+I_PARDE:
+  name: Local Inflow to Pardee Reservoir
+  code_name: I_PARDE
+  kind: SV - Inflow
+  units: cfs
+I_PCRST:
+  name: Inflow to Pinecrest Lake
+  code_name: I_PCRST
+  kind: SV - Inflow
+  units: cfs
+I_PEDRO:
+  name: Tuolumne River inflows to New Don Pedro Dam
+  code_name: I_PEDRO
+  kind: SV - Inflow
+  units: cfs
+I_PLC007:
+  name: Local inflow to Pilot Creek downstream of Georgetown
+  code_name: I_PLC007
+  kind: SV - Inflow
+  units: cfs
+I_PLM001:
+  name: Plum Creek
+  code_name: I_PLM001
+  kind: SV - Inflow
+  units: cfs
+I_PTH070:
+  name: Inflow to Lake Berryessa
+  code_name: I_PTH070
+  kind: SV - Inflow
+  units: cfs
+I_PYN001:
+  name: Paynes and Sevenmile creeks
+  code_name: I_PYN001
+  kind: SV - Inflow
+  units: cfs
+I_PYR001:
+  name: Local inflow to Pyramid Creek at Twin Bridges
+  code_name: I_PYR001
+  kind: SV - Inflow
+  units: cfs
+I_QNT005:
+  name: Quinto Creek
+  code_name: I_QNT005
+  kind: SV - Inflow
+  units: cfs
+I_RCK001:
+  name: Rock Creek
+  code_name: I_RCK001
+  kind: SV - Inflow
+  units: cfs
+I_RLIEF:
+  name: Relief Creek
+  code_name: I_RLIEF
+  kind: SV - Inflow
+  units: cfs
+I_RLLNS:
+  name: Local inflow to Rollins Reservoir
+  code_name: I_RLLNS
+  kind: SV - Inflow
+  units: cfs
+I_RUB002:
+  name: Local inflow to Rubicon River near Foresthill
+  code_name: I_RUB002
+  kind: SV - Inflow
+  units: cfs
+I_RUB047:
+  name: Inflow to Rubicon Reservoir
+  code_name: I_RUB047
+  kind: SV - Inflow
+  units: cfs
+I_RVPHB:
+  name: Inflow to Round Valley and Philbrook Reservoirs
+  code_name: I_RVPHB
+  kind: SV - Inflow
+  units: cfs
+I_SCOTF:
+  name: Local inflow to Scotts Flat
+  code_name: I_SCOTF
+  kind: SV - Inflow
+  units: cfs
+I_SCW008:
+  name: South Fork Cottonwood Creek
+  code_name: I_SCW008
+  kind: SV - Inflow
+  units: cfs
+I_SFA030:
+  name: Local inflow to South Fork American River near Placerville
+  code_name: I_SFA030
+  kind: SV - Inflow
+  units: cfs
+I_SFA040:
+  name: Slab Creek inflow to South Fork American River at Slab Creek Reservoir
+  code_name: I_SFA040
+  kind: SV - Inflow
+  units: cfs
+I_SFA066:
+  name: Local inflow to South Fork American River near Kyburz
+  code_name: I_SFA066
+  kind: SV - Inflow
+  units: cfs
+I_SFA076:
+  name: Local inflow to South Fork American River near Forni Creek
+  code_name: I_SFA076
+  kind: SV - Inflow
+  units: cfs
+I_SFD003:
+  name: Inflow to South Fork of Deer Creek downstream Deer Crk Powerhouse
+  code_name: I_SFD003
+  kind: SV - Inflow
+  units: cfs
+I_SFF008:
+  name: Local inflow to South Fork Feather River at Enterprise
+  code_name: I_SFF008
+  kind: SV - Inflow
+  units: cfs
+I_SFF011:
+  name: Local inflow to South Fork Feather River at Ponderosa Reservoir
+  code_name: I_SFF011
+  kind: SV - Inflow
+  units: cfs
+I_SFM005:
+  name: South Fork Mokelumne River
+  code_name: I_SFM005
+  kind: SV - Inflow
+  units: cfs
+I_SFR006:
+  name: South Fork Rubicon River
+  code_name: I_SFR006
+  kind: SV - Inflow
+  units: cfs
+I_SFS030:
+  name: Local inflow to SF Stanislaus River
+  code_name: I_SFS030
+  kind: SV - Inflow
+  units: cfs
+I_SFS033:
+  name: Local inflow to South Fork Stanislaus River above Strawberry
+  code_name: I_SFS033
+  kind: SV - Inflow
+  units: cfs
+I_SFY007:
+  name: Local inflow to SF Yuba River
+  code_name: I_SFY007
+  kind: SV - Inflow
+  units: cfs
+I_SFY048:
+  name: South Fork Yuba River Near Cisco
+  code_name: I_SFY048
+  kind: SV - Inflow
+  units: cfs
+I_SGRGE:
+  name: Local inflow to Stony Gorge Reservoir
+  code_name: I_SGRGE
+  kind: SV - Inflow
+  units: cfs
+I_SHSTA:
+  name: Inflow to Shasta Lake
+  code_name: I_SHSTA
+  kind: SV - Inflow
+  units: cfs
+I_SILVR:
+  name: Inflow to Silver Lake
+  code_name: I_SILVR
+  kind: SV - Inflow
+  units: cfs
+I_SJR258:
+  name: Local inflow from Little Dry Creek to San Joaquin River
+  code_name: I_SJR258
+  kind: SV - Inflow
+  units: cfs
+I_SJR265:
+  name: Local inflow from Cottonwood Creek to San Joaquin River
+  code_name: I_SJR265
+  kind: SV - Inflow
+  units: cfs
+I_SLC003:
+  name: South Fork Long Canyon Creek
+  code_name: I_SLC003
+  kind: SV - Inflow
+  units: cfs
+I_SLF009:
+  name: Local inflow to Silver Fork American River at Proposed Diversion for Alder
+    Creek Reservoir
+  code_name: I_SLF009
+  kind: SV - Inflow
+  units: cfs
+I_SLO007:
+  name: Salado Creek
+  code_name: I_SLO007
+  kind: SV - Inflow
+  units: cfs
+I_SLT009:
+  name: Slate Creek
+  code_name: I_SLT009
+  kind: SV - Inflow
+  units: cfs
+I_SLTSP:
+  name: Inflow to Salt Springs Reservoir
+  code_name: I_SLTSP
+  kind: SV - Inflow
+  units: cfs
+I_SLUIS:
+  name: Local inflows to San Luis Reservoir
+  code_name: I_SLUIS
+  kind: SV - Inflow
+  units: cfs
+I_SLV006:
+  name: Local inflow to Silver Creek at Camino Reservoir
+  code_name: I_SLV006
+  kind: SV - Inflow
+  units: cfs
+I_SLV015:
+  name: Local inflow to Silver Creek at Junction Reservoir
+  code_name: I_SLV015
+  kind: SV - Inflow
+  units: cfs
+I_SLYCK:
+  name: Sly Creek
+  code_name: I_SLYCK
+  kind: SV - Inflow
+  units: cfs
+I_SPICE:
+  name: Highland Creek
+  code_name: I_SPICE
+  kind: SV - Inflow
+  units: cfs
+I_SPLDG:
+  name: Local inflow to Spaulding Reservoir
+  code_name: I_SPLDG
+  kind: SV - Inflow
+  units: cfs
+I_STMPY:
+  name: Inflow to Stumpy Meadows Reservoir
+  code_name: I_STMPY
+  kind: SV - Inflow
+  units: cfs
+I_STS059:
+  name: Local inflow to Stanislaus River below Tulloch Reservoir
+  code_name: I_STS059
+  kind: SV - Inflow
+  units: cfs
+I_STS072:
+  name: Local inflow to New Melones Reservoir
+  code_name: I_STS072
+  kind: SV - Inflow
+  units: cfs
+I_TGC003:
+  name: Tiger Creek
+  code_name: I_TGC003
+  kind: SV - Inflow
+  units: cfs
+I_THM028:
+  name: Thomes Creek
+  code_name: I_THM028
+  kind: SV - Inflow
+  units: cfs
+I_TRNTY:
+  name: Inflow to Claire Engle (Trinity) Lake
+  code_name: I_TRNTY
+  kind: SV - Inflow
+  units: cfs
+I_TULOC:
+  name: Local inflow to Tullock Reservoir
+  code_name: I_TULOC
+  kind: SV - Inflow
+  units: cfs
+I_TUO054:
+  name: Local inflow to Tuolumne River at LaGrange Dam
+  code_name: I_TUO054
+  kind: SV - Inflow
+  units: cfs
+I_UBEAR:
+  name: Inflow to Upper Bear River Reservoir
+  code_name: I_UBEAR
+  kind: SV - Inflow
+  units: cfs
+I_UNVLY:
+  name: Inflow to Union Valley Reservoir
+  code_name: I_UNVLY
+  kind: SV - Inflow
+  units: cfs
+I_WBF006:
+  name: Local inflow to WB Feather River at Yankee Hill
+  code_name: I_WBF006
+  kind: SV - Inflow
+  units: cfs
+I_WBF015:
+  name: Local inflow to WB Feather River at Miocene Diversion Dam
+  code_name: I_WBF015
+  kind: SV - Inflow
+  units: cfs
+I_WBF030:
+  name: West Branch Feather River
+  code_name: I_WBF030
+  kind: SV - Inflow
+  units: cfs
+I_WBR001:
+  name: Weber Creek
+  code_name: I_WBR001
+  kind: SV - Inflow
+  units: cfs
+I_WKYTN:
+  name: Clear Creek inflow to Whiskeytown Lake
+  code_name: I_WKYTN
+  kind: SV - Inflow
+  units: cfs
+I_WLF013:
+  name: Wolf Creek
+  code_name: I_WLF013
+  kind: SV - Inflow
+  units: cfs
+T_BENDBRIDGE_SV:
+  name: CT_BENDBRIDGE_SV
+  code_name: CT_BENDBRIDGE_SV
+  kind: SV - Closure Term
+  units: cfs
+T_BUTTECITY_SV:
+  name: CT_BUTTECITY_SV
+  code_name: CT_BUTTECITY_SV
+  kind: SV - Closure Term
+  units: cfs
+T_COLUSA_SV:
+  name: CT_COLUSA_SV
+  code_name: CT_COLUSA_SV
+  kind: SV - Closure Term
+  units: cfs
+T_DAVIS_SV:
+  name: CT_DAVIS_SV
+  code_name: CT_DAVIS_SV
+  kind: SV - Closure Term
+  units: cfs
+T_FAIROAKS_SV:
+  name: CT_FAIROAKS_SV
+  code_name: CT_FAIROAKS_SV
+  kind: SV - Closure Term
+  units: cfs
+T_FREEPORT_SV:
+  name: CT_FREEPORT_SV
+  code_name: CT_FREEPORT_SV
+  kind: SV - Closure Term
+  units: cfs
+T_GRAVELLYFORD_SV:
+  name: CT_GRAVELLYFORD_SV
+  code_name: CT_GRAVELLYFORD_SV
+  kind: SV - Closure Term
+  units: cfs
+T_MELON_SV:
+  name: CT_MELON_SV
+  code_name: CT_MELON_SV
+  kind: SV - Closure Term
+  units: cfs
+T_MERCED_SV:
+  name: CT_MERCED_SV
+  code_name: CT_MERCED_SV
+  kind: SV - Closure Term
+  units: cfs
+T_MODESTO_SV:
+  name: CT_MODESTO_SV
+  code_name: CT_MODESTO_SV
+  kind: SV - Closure Term
+  units: cfs
+T_MUDSLOUGH_SV:
+  name: CT_MUDSLOUGH_SV
+  code_name: CT_MUDSLOUGH_SV
+  kind: SV - Closure Term
+  units: cfs
+T_NICOLAUS_SV:
+  name: CT_NICOLAUS_SV
+  code_name: CT_NICOLAUS_SV
+  kind: SV - Closure Term
+  units: cfs
+T_OROVILLE_SV:
+  name: CT_OROVILLE_SV
+  code_name: CT_OROVILLE_SV
+  kind: SV - Closure Term
+  units: cfs
+T_PARDE_SV:
+  name: CT_PARDE_SV
+  code_name: CT_PARDE_SV
+  kind: SV - Closure Term
+  units: cfs
+T_PEDRO_SV:
+  name: CT_PEDRO_SV
+  code_name: CT_PEDRO_SV
+  kind: SV - Closure Term
+  units: cfs
+T_RIPON_SV:
+  name: CT_RIPON_SV
+  code_name: CT_RIPON_SV
+  kind: SV - Closure Term
+  units: cfs
+T_SACSLOUGH_SV:
+  name: CT_SACSLOUGH_SV
+  code_name: CT_SACSLOUGH_SV
+  kind: SV - Closure Term
+  units: cfs
+T_SALTSLOUGH_SV:
+  name: CT_SALTSLOUGH_SV
+  code_name: CT_SALTSLOUGH_SV
+  kind: SV - Closure Term
+  units: cfs
+T_SMARTVILLE_SV:
+  name: CT_SMARTVILLE_SV
+  code_name: CT_SMARTVILLE_SV
+  kind: SV - Closure Term
+  units: cfs
+T_STEVINSON_SV:
+  name: CT_STEVINSON_SV
+  code_name: CT_STEVINSON_SV
+  kind: SV - Closure Term
+  units: cfs
+T_VERNALIS_SV:
+  name: CT_VERNALIS_SV
+  code_name: CT_VERNALIS_SV
+  kind: SV - Closure Term
+  units: cfs
+T_VERONA_SV:
+  name: CT_VERONA_SV
+  code_name: CT_VERONA_SV
+  kind: SV - Closure Term
+  units: cfs
+T_WHEATLAND_SV:
+  name: CT_WHEATLAND_SV
+  code_name: CT_WHEATLAND_SV
+  kind: SV - Closure Term
+  units: cfs
+T_WILKINSSL_SV:
+  name: CT_WILKINSSL_SV
+  code_name: CT_WILKINSSL_SV
+  kind: SV - Closure Term
+  units: cfs
+T_WOODLAND_SV:
+  name: CT_WOODLAND_SV
+  code_name: CT_WOODLAND_SV
+  kind: SV - Closure Term
+  units: cfs
+T_YOLO_SV:
+  name: CT_YOLO_SV
+  code_name: CT_YOLO_SV
+  kind: SV - Closure Term
+  units: cfs
+VPTOTALDEL:
+  name: Delivery - CVP Delivery SOD
+  code_name: CVPTOTALDEL
+  kind: Delivery
+  units: cfs
+C_CAA003:
+  name: Total Banks Exports
+  code_name: C_CAA003
+  kind: Export
+  units: cfs  
+C_CAA003_CVC:
+  name: Other - Banks Export Cross Valley Pumping
+  code_name: C_CAA003_CVC
+  kind: Export
+  units: cfs
+C_CAA003_CVP:
+  name: Banks CVP Exports
+  code_name: C_CAA003_CVP
+  kind: Export
+  units: cfs
+C_CAA003_IF:
+  name: Other - Banks PP North Delta
+  code_name: C_CAA003_IF
+  kind: Export
+  units: cfs
+C_CAA003_SWP:
+  name: Banks SWP Exports
+  code_name: C_CAA003_SWP
+  kind: Export
+  units: cfs
+C_CAA003_SWP_TD:
+  name: Other - Banks PP SWP Through Delta
+  code_name: C_CAA003_SWP_TD
+  kind: Export
+  units: cfs
+C_CAA003_TD:
+  name: Other - Banks PP Through Delta
+  code_name: C_CAA003_TD
+  kind: Export
+  units: cfs
+C_CAA003_WTS:
+  name: Banks Export WTS
+  code_name: C_CAA003_WTS
+  kind: Export
+  units: cfs
+C_DMC000:
+  name: Total Jones Exports
+  code_name: C_DMC000
+  kind: Export
+  units: cfs
+C_DMC000_CVP:
+  name: Jones CVP Exports
+  code_name: C_DMC000_CVP
+  kind: Export
+  units: cfs
+C_DMC000_IF:
+  name: Other - Jones PP North Delta
+  code_name: C_DMC000_IF
+  kind: Export
+  units: cfs
+C_DMC000_TD:
+  name: Other - Jones PP Through Delta
+  code_name: C_DMC000_TD
+  kind: Export
+  units: cfs
+C_OMR014:
+  name: Old and Middle River flow
+  code_name: C_OMR014
+  kind: Delta
+  units: cfs
+C_SAC000:
+  name: Total Delta Outflow
+  code_name: C_SAC000
+  kind: Delta
+  units: cfs
+C_SAC017:
+  name: Delta - Flow at Rio Vista
+  code_name: C_SAC017
+  kind: Delta
+  units: cfs
+C_SAC029B:
+  name: Delta - Flow at Georgiana Slough
+  code_name: C_SAC029B
+  kind: Delta
+  units: cfs
+C_SAC030:
+  name: Delta - Flow below DXC
+  code_name: C_SAC030
+  kind: Delta
+  units: cfs
+C_SAC041:
+  name: Sac R. Flow at Hood
+  code_name: C_SAC041
+  kind: Upstream Flows
+  units: cfs
+C_SAC048:
+  name: Sac R. Flow at Freeport
+  code_name: C_SAC048
+  kind: Upstream Flows
+  units: cfs
+C_SAC083:
+  name: Sac R. Flow at Verona
+  code_name: C_SAC083
+  kind: Upstream Flows
+  units: cfs
+C_SAC085:
+  name: Sac R. Flow Above Fremont Weir
+  code_name: C_SAC085
+  kind: Upstream Flows
+  units: cfs
+C_SAC097:
+  name: Sac R. Flow at Wilkins Slough
+  code_name: C_SAC097
+  kind: Upstream Flows
+  units: cfs
+C_SAC240:
+  name: Sac R. Flow at RedBluff
+  code_name: C_SAC240
+  kind: Upstream Flows
+  units: cfs
+D408:
+  name: Delta - CCWD
+  code_name: D408
+  kind: Channel
+  units: cfs
+DELTAINFLOWFORNDOI:
+  name: Delta - Delta Inflow (NDOI)
+  code_name: DELTAINFLOWFORNDOI
+  kind: Channel
+  units: cfs
+DELTARDV_TOTAL:
+  name: Delivery - SWP Del Target TA + CO
+  code_name: DELTARDV_TOTAL
+  kind: Channel
+  units: cfs
+DELTAR_A_DV:
+  name: Delivery - SWP Del Target TA
+  code_name: DELTAR_A_DV
+  kind: Channel
+  units: cfs
+DEL_CVP_PAG_N:
+  name: Delivery - CVP Delivery PAG N
+  code_name: DEL_CVP_PAG_N
+  kind: Channel
+  units: cfs
+DEL_CVP_PAG_S:
+  name: Delivery - CVP Delivery PAG S
+  code_name: DEL_CVP_PAG_S
+  kind: Channel
+  units: cfs
+DEL_CVP_PEX_S:
+  name: Delivery - CVP Delivery PEX S
+  code_name: DEL_CVP_PEX_S
+  kind: Channel
+  units: cfs
+DEL_CVP_PMI_S:
+  name: Delivery - CVP Delivery PMI S
+  code_name: DEL_CVP_PMI_S
+  kind: Channel
+  units: cfs
+DEL_CVP_PRF_N:
+  name: Delivery - CVP Delivery PRF N
+  code_name: DEL_CVP_PRF_N
+  kind: Channel
+  units: cfs
+DEL_CVP_PRF_S:
+  name: Delivery - CVP Delivery PRF S
+  code_name: DEL_CVP_PRF_S
+  kind: Channel
+  units: cfs
+DEL_CVP_PSC_N:
+  name: Delivery - CVP Delivery PSC N
+  code_name: DEL_CVP_PSC_N
+  kind: Channel
+  units: cfs
+DEL_CVP_TOTAL_N:
+  name: Delivery - CVP Delivery NOD
+  code_name: DEL_CVP_TOTAL_N
+  kind: Channel
+  units: cfs
+DEL_CVP_TOTAL_S:
+  name: Delivery - CVP Delivery SOD no CVC
+  code_name: DEL_CVP_TOTAL_S
+  kind: Channel
+  units: cfs
+DEL_SWP_PIN:
+  name: Other - SWP Delivery Int
+  code_name: DEL_SWP_PIN
+  kind: Channel
+  units: cfs
+D_OMR027_CAA000:
+  name: Delta - Banks Exports
+  code_name: D_OMR027_CAA000
+  kind: Channel
+  units: cfs
+D_OMR028_DMC000:
+  name: Delta - Jones Exports
+  code_name: D_OMR028_DMC000
+  kind: Channel
+  units: cfs
+D_SAC030_MOK014:
+  name: Delta - DXC Flow
+  code_name: D_SAC030_MOK014
+  kind: Channel
+  units: cfs
+EM_EC_MONTH:
+  name: Salinity - EM EC
+  code_name: EM_EC_MONTH
+  kind: Channel
+  units: ec
+EXPORTACTUALIF:
+  name: Delta - Total NDD Exports
+  code_name: EXPORTACTUALIF
+  kind: Channel
+  units: cfs
+EXPORTACTUALTD:
+  name: Delta - Total TD Exports
+  code_name: EXPORTACTUALTD
+  kind: Channel
+  units: cfs
+JP_EC_MONTH:
+  name: Salinity - JP EC
+  code_name: JP_EC_MONTH
+  kind: Channel
+  units: cfs
+MRDO_FINALDV:
+  name: Delta - Modeled Required DO
+  code_name: MRDO_FINALDV
+  kind: Channel
+  units: cfs
+NDOI:
+  name: Delta - Delta Outflow (NDOI)
+  code_name: NDOI
+  kind: Channel
+  units: cfs
+NDOI_ADD:
+  name: Delta - Additional Delta Outflow (NDOI)
+  code_name: NDOI_ADD
+  kind: Channel
+  units: cfs
+NDOI_ADD_ANN:
+  name: Delta - Additional Outflow for ANN (NDOI)
+  code_name: NDOI_ADD_ANN
+  kind: Channel
+  units: cfs
+NDOI_ADD_CVP:
+  name: Delta - Additional Outflow for CVP (NDOI)
+  code_name: NDOI_ADD_CVP
+  kind: Channel
+  units: cfs
+NDOI_ADD_SWP:
+  name: Delta - Additional Outflow for SWP (NDOI)
+  code_name: NDOI_ADD_SWP
+  kind: Channel
+  units: cfs
+NDOI_MIN:
+  name: Delta - Required Delta Outflow for NDO and X2
+  code_name: NDOI_MIN
+  kind: Allocation
+  units: cfs
+PERDV_CVPAG_S:
+  name: Delivery - CVP Allocation (SOD Ag)
+  code_name: PERDV_CVPAG_S
+  kind: Allocation
+  units: percent
+PERDV_CVPAG_SYS:
+  name: Delivery - CVP Allocation (NOD Ag)
+  code_name: PERDV_CVPAG_SYS
+  kind: Allocation
+  units: percent  
+PERDV_CVPEX_S:
+  name: Delivery - CVP Allocation (SOD EX)
+  code_name: PERDV_CVPEX_S
+  kind: Allocation
+  units: percent  
+PERDV_CVPMI_S:
+  name: Delivery - CVP Allocation (SOD M&I)
+  code_name: PERDV_CVPMI_S
+  kind: Allocation
+  units: percent
+PERDV_CVPMI_SYS:
+  name: Delivery - CVP Allocation (NOD M&I)
+  code_name: PERDV_CVPMI_SYS
+  kind: Allocation
+  units: percent
+PERDV_CVPRF_S:
+  name: Delivery - CVP Allocation (SOD RF)
+  code_name: PERDV_CVPRF_S
+  kind: Allocation
+  units: percent
+PERDV_CVPRF_SYS:
+  name: Delivery - CVP Allocation (NOD RF)
+  code_name: PERDV_CVPRF_SYS
+  kind: Allocation
+  units: percent
+PERDV_CVPSC_SYS:
+  name: Delivery - CVP Allocation (NOD SC)
+  code_name: PERDV_CVPSC_SYS
+  kind: Allocation
+  units: percent
+PERDV_SWP_FSC:
+  name: Other - SWP Allocation (FRSA)
+  code_name: PERDV_SWP_FSC
+  kind: Allocation
+  units: percent
+PERDV_SWP_MWD1:
+  name: Other - SWP Allocation (M&I)
+  code_name: PERDV_SWP_MWD1
+  kind: Allocation
+  units: percent
+RS_EC_MONTH:
+  name: Salinity - RS EC
+  code_name: RS_EC_MONTH
+  kind: Salinity
+  units: ec
+SHORT_CVP_TOT_N:
+  name: Delivery - SHORT_CVP_TOT_N
+  code_name: SHORT_CVP_TOT_N
+  kind: Shortage
+  units: cfs
+SHORT_CVP_TOT_S:
+  name: Delivery - SHORT_CVP_TOT_S
+  code_name: SHORT_CVP_TOT_S
+  kind: Shortage
+  units: cfs
+SHORT_SWP_TOTA:
+  name: Other - SHORT_SWP_TOTAL (Cumulative)
+  code_name: SHORT_SWP_TOTA
+  kind: Shortage
+  units: cfs
+SHORT_SWP_TOT_S:
+  name: Other - SWP South of Delta Shortage (Cumulative)
+  code_name: SHORT_SWP_TOT_S
+  kind: Shortage
+  units: cfs
+SHORT_SWP_TOT_N:
+  name: Other - SWP North of Delta Shortage (Cumulative)
+  code_name: SHORT_SWP_TOT_N
+  kind: Shortage
+  units: cfs
+SP_SAC066_YBP020:
+  name: Upstream Flows - Sacramento Weir spills
+  code_name: SP_SAC066_YBP020
+  kind: Channel
+  units: cfs
+SP_SAC083_YBP037:
+  name: Upstream Flows - Fremont Weir spills
+  code_name: SP_SAC083_YBP037
+  kind: Channel
+  units: cfs
+SWP_CO_FEATH:
+  name: Delivery - SWP_CO_FEATH
+  code_name: SWP_CO_FEATH
+  kind: Channel
+  units: cfs
+SWP_CO_NBAY:
+  name: Delivery - SWP_CO_NBAY
+  code_name: SWP_CO_NBAY
+  kind: Channel
+  units: cfs
+SWP_CO_TOTAL:
+  name: SWP Carryover Deliveries
+  code_name: SWP_CO_TOTAL
+  kind: Delivery
+  units: cfs
+SWP_IN_FEATH:
+  name: Delivery - SWP_IN_FEATH
+  code_name: SWP_IN_FEATH
+  kind: Channel
+  units: cfs
+SWP_IN_NBAY:
+  name: Delivery - SWP_IN_NBAY
+  code_name: SWP_IN_NBAY
+  kind: Channel
+  units: cfs
+SWP_IN_TOTAL:
+  name: SWP Article 21 Deliveries
+  code_name: SWP_IN_TOTAL
+  kind: Delivery
+  units: cfs
+SWP_LOSS:
+  name: Delivery - SWP_LOSS
+  code_name: SWP_LOSS
+  kind: Channel
+  units: cfs
+SWP_PERDELDV:
+  name: Delivery - SWP PERCENT DELIVERY
+  code_name: SWP_PERDELDV
+  kind: Channel
+  units: cfs
+SWP_TA_FEATH:
+  name: Delivery - SWP_TA_FEATH
+  code_name: SWP_TA_FEATH
+  kind: Channel
+  units: cfs
+SWP_TA_NBAY:
+  name: Delivery - SWP_TA_NBAY
+  code_name: SWP_TA_NBAY
+  kind: Channel
+  units: cfs
+SWP_TA_TOTAL:
+  name: SWP Table A Deliveries
+  code_name: SWP_TA_TOTAL
+  kind: Delivery
+  units: cfs
+S_FOLSM:
+  name: Storage - Folsom Storage
+  code_name: S_FOLSM
+  kind: Reservoir Storage
+  units: taf
+S_MCLRE:
+  name: Storage - McClure Storage
+  code_name: S_MCLRE
+  kind: Reservoir Storage
+  units: taf
+S_MELON:
+  name: Storage - New Melones Storage
+  code_name: S_MELON
+  kind: Reservoir Storage
+  units: taf
+S_MLRTN:
+  name: Storage - Friant Storage
+  code_name: S_MLRTN
+  kind: Reservoir Storage
+  units: taf
+S_OROVL:
+  name: Storage - Oroville Storage
+  code_name: S_OROVL
+  kind: Reservoir Storage
+  units: taf
+S_DELVE:
+  name: Storage - Lake Del Valle Storage
+  code_name: S_DELVE
+  kind: Reservoir Storage
+  units: taf
+S_SVRWD:
+  name: Storage - Silverwood Lake Storage
+  code_name: S_SVRWD
+  kind: Reservoir Storage
+  units: taf
+S_PRRIS:
+  name: Storage - Lake Perris Storage
+  code_name: S_PRRIS
+  kind: Reservoir Storage
+  units: taf
+S_PYRMD:
+  name: Storage - Pyramid Lake Storage
+  code_name: S_PYRMD
+  kind: Reservoir Storage
+  units: taf
+S_CSTIC:
+  name: Storage - Castaic Lake Storage
+  code_name: S_CSTIC
+  kind: Reservoir Storage
+  units: taf
+S_PEDRO:
+  name: Storage - New Don Pedro Storage
+  code_name: S_PEDRO
+  kind: Reservoir Storage
+  units: taf
+S_SHSTA:
+  name: Storage - Shasta Storage
+  code_name: S_SHSTA
+  kind: Reservoir Storage
+  units: taf
+S_SLUIS_CVP:
+  name: Storage - San Luis Storage - CVP
+  code_name: S_SLUIS_CVP
+  kind: Reservoir Storage
+  units: taf
+S_SLUIS_SWP:
+  name: Storage - San Luis Storage - SWP
+  code_name: S_SLUIS_SWP
+  kind: Reservoir Storage
+  units: taf
+S_TRNTY:
+  name: Storage - Trinity Storage
+  code_name: S_TRNTY
+  kind: Reservoir Storage
+  units: taf
+S_WKYTN:
+  name: Storage - Whiskeytown
+  code_name: S_WKYTN
+  kind: Reservoir Storage
+  units: taf
+S_LOSVQ:
+  name: Storage - Los Vaqueros Reservoir
+  code_name: S_LOSVQ
+  kind: Reservoir Storage
+  units: taf
+WYT_SAC_:
+  name: Sacramento Valley Index (SVI) WYT Classification
+  code_name: WYT_SAC_
+  kind: Channel
+  units: index
+X2_PRV:
+  name: Salinity - X2 Position prev
+  code_name: X2_PRV
+  kind: Channel
+  units: km
+DELTAINFLOWFORNDOI:
+  name: Delta Inflow
+  code_name: DELTAINFLOWFORNDOI
+  kind: Delta
+  units: cfs
+SWP_CO_ACFC:
+  name: Alameda County FC&WCD, Zone 7
+  code_name: SWP_CO_ACFC
+  kind: Delivery - CO
+  units: cfs
+SWP_CO_ACWD:
+  name: Alameda County WD
+  code_name: SWP_CO_ACWD
+  kind: Delivery - CO
+  units: cfs
+SWP_CO_AVEK:
+  name: Antelope Valley-East Kern WA
+  code_name: SWP_CO_AVEK
+  kind: Delivery - CO
+  units: cfs
+SWP_CO_CLA:
+  name: Crestline-Line Arrowhead WA
+  code_name: SWP_CO_CLA
+  kind: Delivery - CO
+  units: cfs
+SWP_CO_CLWA1:
+  name: Santa Clarita WA (San Joaquin)
+  code_name: SWP_CO_CLWA1
+  kind: Delivery - CO
+  units: cfs
+SWP_CO_CLWA2:
+  name: Santa Clarita WA (South Coast)
+  code_name: SWP_CO_CLWA2
+  kind: Delivery - CO
+  units: cfs
+SWP_CO_CVWD:
+  name: Coachella Valley WD
+  code_name: SWP_CO_CVWD
+  kind: Delivery - CO
+  units: cfs
+SWP_CO_DESERT:
+  name: Desert WA
+  code_name: SWP_CO_DESERT
+  kind: Delivery - CO
+  units: cfs
+SWP_CO_DUDLEY:
+  name: Dudley Ridge WD
+  code_name: SWP_CO_DUDLEY
+  kind: Delivery - CO
+  units: cfs
+SWP_CO_EMPIRE:
+  name: Empire West Side ID
+  code_name: SWP_CO_EMPIRE
+  kind: Delivery - CO
+  units: cfs
+SWP_CO_KERN:
+  name: Kern Counta WA
+  code_name: SWP_CO_KERN
+  kind: Delivery - CO
+  units: cfs
+SWP_CO_KINGS:
+  name: County of Kings
+  code_name: SWP_CO_KINGS
+  kind: Delivery - CO
+  units: cfs
+SWP_CO_LCID:
+  name: Littlerock Creek ID
+  code_name: SWP_CO_LCID
+  kind: Delivery - CO
+  units: cfs
+SWP_CO_MWA:
+  name: Mojave WA
+  code_name: SWP_CO_MWA
+  kind: Delivery - CO
+  units: cfs
+SWP_CO_MWD:
+  name: Metropolitan WDSC
+  code_name: SWP_CO_MWD
+  kind: Delivery - CO
+  units: cfs
+SWP_CO_NAPA:
+  name: Napa County FC&WCD
+  code_name: SWP_CO_NAPA
+  kind: Delivery - CO
+  units: cfs
+SWP_CO_OAK:
+  name: Oak Flat WD
+  code_name: SWP_CO_OAK
+  kind: Delivery - CO
+  units: cfs
+SWP_CO_PWD:
+  name: Palmdale WD
+  code_name: SWP_CO_PWD
+  kind: Delivery - CO
+  units: cfs
+SWP_CO_SB:
+  name: Santa Barbara County FC&WCD
+  code_name: SWP_CO_SB
+  kind: Delivery - CO
+  units: cfs
+SWP_CO_SBV:
+  name: San Bernadino Valley MWD
+  code_name: SWP_CO_SBV
+  kind: Delivery - CO
+  units: cfs
+SWP_CO_SCV:
+  name: Santa Clara Valley WD
+  code_name: SWP_CO_SCV
+  kind: Delivery - CO
+  units: cfs
+SWP_CO_SGP:
+  name: San Gorgonio Pass WA
+  code_name: SWP_CO_SGP
+  kind: Delivery - CO
+  units: cfs
+SWP_CO_SGV:
+  name: San Gabriel Valley MWD
+  code_name: SWP_CO_SGV
+  kind: Delivery - CO
+  units: cfs
+SWP_CO_SLO:
+  name: San Luis Obispo County FC&WCD
+  code_name: SWP_CO_SLO
+  kind: Delivery - CO
+  units: cfs
+SWP_CO_SOLANO:
+  name: Solano County WA
+  code_name: SWP_CO_SOLANO
+  kind: Delivery - CO
+  units: cfs
+SWP_CO_TULARE:
+  name: Tulare Lake Basin WSD
+  code_name: SWP_CO_TULARE
+  kind: Delivery - CO
+  units: cfs
+SWP_CO_VC:
+  name: Ventura County FCD
+  code_name: SWP_CO_VC
+  kind: Delivery - CO
+  units: cfs
+SWP_IN_ACFC:
+  name: Alameda County FC&WCD, Zone 7
+  code_name: SWP_IN_ACFC
+  kind: Delivery - IN
+  units: cfs
+SWP_IN_ACWD:
+  name: Alameda County WD
+  code_name: SWP_IN_ACWD
+  kind: Delivery - IN
+  units: cfs
+SWP_IN_AVEK:
+  name: Antelope Valley-East Kern WA
+  code_name: SWP_IN_AVEK
+  kind: Delivery - IN
+  units: cfs
+SWP_IN_CLA:
+  name: Crestline-Line Arrowhead WA
+  code_name: SWP_IN_CLA
+  kind: Delivery - IN
+  units: cfs
+SWP_IN_CLWA1:
+  name: Santa Clarita WA (San Joaquin)
+  code_name: SWP_IN_CLWA1
+  kind: Delivery - IN
+  units: cfs
+SWP_IN_CLWA2:
+  name: Santa Clarita WA (South Coast)
+  code_name: SWP_IN_CLWA2
+  kind: Delivery - IN
+  units: cfs
+SWP_IN_CVWD:
+  name: Coachella Valley WD
+  code_name: SWP_IN_CVWD
+  kind: Delivery - IN
+  units: cfs
+SWP_IN_DESERT:
+  name: Desert WA
+  code_name: SWP_IN_DESERT
+  kind: Delivery - IN
+  units: cfs
+SWP_IN_DUDLEY:
+  name: Dudley Ridge WD
+  code_name: SWP_IN_DUDLEY
+  kind: Delivery - IN
+  units: cfs
+SWP_IN_EMPIRE:
+  name: Empire West Side ID
+  code_name: SWP_IN_EMPIRE
+  kind: Delivery - IN
+  units: cfs
+SWP_IN_KERN:
+  name: Kern Counta WA
+  code_name: SWP_IN_KERN
+  kind: Delivery - IN
+  units: cfs
+SWP_IN_KINGS:
+  name: County of Kings
+  code_name: SWP_IN_KINGS
+  kind: Delivery - IN
+  units: cfs
+SWP_IN_LCID:
+  name: Littlerock Creek ID
+  code_name: SWP_IN_LCID
+  kind: Delivery - IN
+  units: cfs
+SWP_IN_MWA:
+  name: Mojave WA
+  code_name: SWP_IN_MWA
+  kind: Delivery - IN
+  units: cfs
+SWP_IN_MWD:
+  name: Metropolitan WDSC
+  code_name: SWP_IN_MWD
+  kind: Delivery - IN
+  units: cfs
+SWP_IN_NAPA:
+  name: Napa County FC&WCD
+  code_name: SWP_IN_NAPA
+  kind: Delivery - IN
+  units: cfs
+SWP_IN_OAK:
+  name: Oak Flat WD
+  code_name: SWP_IN_OAK
+  kind: Delivery - IN
+  units: cfs
+SWP_IN_PWD:
+  name: Palmdale WD
+  code_name: SWP_IN_PWD
+  kind: Delivery - IN
+  units: cfs
+SWP_IN_SB:
+  name: Santa Barbara County FC&WCD
+  code_name: SWP_IN_SB
+  kind: Delivery - IN
+  units: cfs
+SWP_IN_SBV:
+  name: San Bernadino Valley MWD
+  code_name: SWP_IN_SBV
+  kind: Delivery - IN
+  units: cfs
+SWP_IN_SCV:
+  name: Santa Clara Valley WD
+  code_name: SWP_IN_SCV
+  kind: Delivery - IN
+  units: cfs
+SWP_IN_SGP:
+  name: San Gorgonio Pass WA
+  code_name: SWP_IN_SGP
+  kind: Delivery - IN
+  units: cfs
+SWP_IN_SGV:
+  name: San Gabriel Valley MWD
+  code_name: SWP_IN_SGV
+  kind: Delivery - IN
+  units: cfs
+SWP_IN_SLO:
+  name: San Luis Obispo County FC&WCD
+  code_name: SWP_IN_SLO
+  kind: Delivery - IN
+  units: cfs
+SWP_IN_SOLANO:
+  name: Solano County WA
+  code_name: SWP_IN_SOLANO
+  kind: Delivery - IN
+  units: cfs
+SWP_IN_TULARE:
+  name: Tulare Lake Basin WSD
+  code_name: SWP_IN_TULARE
+  kind: Delivery - IN
+  units: cfs
+SWP_IN_VC:
+  name: Ventura County FCD
+  code_name: SWP_IN_VC
+  kind: Delivery - IN
+  units: cfs
+SWP_TA_ACFC:
+  name: Alameda County FC&WCD, Zone 7
+  code_name: SWP_TA_ACFC
+  kind: Delivery - TA
+  units: cfs
+SWP_TA_ACWD:
+  name: Alameda County WD
+  code_name: SWP_TA_ACWD
+  kind: Delivery - TA
+  units: cfs
+SWP_TA_AVEK:
+  name: Antelope Valley-East Kern WA
+  code_name: SWP_TA_AVEK
+  kind: Delivery - TA
+  units: cfs
+SWP_TA_CLA:
+  name: Crestline-Line Arrowhead WA
+  code_name: SWP_TA_CLA
+  kind: Delivery - TA
+  units: cfs
+SWP_TA_CLWA1:
+  name: Santa Clarita WA (San Joaquin)
+  code_name: SWP_TA_CLWA1
+  kind: Delivery - TA
+  units: cfs
+SWP_TA_CLWA2:
+  name: Santa Clarita WA (South Coast)
+  code_name: SWP_TA_CLWA2
+  kind: Delivery - TA
+  units: cfs
+SWP_TA_CVWD:
+  name: Coachella Valley WD
+  code_name: SWP_TA_CVWD
+  kind: Delivery - TA
+  units: cfs
+SWP_TA_DESERT:
+  name: Desert WA
+  code_name: SWP_TA_DESERT
+  kind: Delivery - TA
+  units: cfs
+SWP_TA_DUDLEY:
+  name: Dudley Ridge WD
+  code_name: SWP_TA_DUDLEY
+  kind: Delivery - TA
+  units: cfs
+SWP_TA_EMPIRE:
+  name: Empire West Side ID
+  code_name: SWP_TA_EMPIRE
+  kind: Delivery - TA
+  units: cfs
+SWP_TA_KERNAG:
+  name: Kern County WA (Ag)
+  code_name: SWP_TA_KERNAG
+  kind: Delivery - TA
+  units: cfs
+SWP_TA_KERNMI:
+  name: Kern County WA (MI)
+  code_name: SWP_TA_KERNMI
+  kind: Delivery - TA
+  units: cfs
+SWP_TA_KINGS:
+  name: County of Kings
+  code_name: SWP_TA_KINGS
+  kind: Delivery - TA
+  units: cfs
+SWP_TA_LCID:
+  name: Littlerock Creek ID
+  code_name: SWP_TA_LCID
+  kind: Delivery - TA
+  units: cfs
+SWP_TA_MWA:
+  name: Mojave WA
+  code_name: SWP_TA_MWA
+  kind: Delivery - TA
+  units: cfs
+SWP_TA_MWD:
+  name: Metropolitan WDSC
+  code_name: SWP_TA_MWD
+  kind: Delivery - TA
+  units: cfs
+SWP_TA_NAPA:
+  name: Napa County FC&WCD
+  code_name: SWP_TA_NAPA
+  kind: Delivery - TA
+  units: cfs
+SWP_TA_OAK:
+  name: Oak Flat WD
+  code_name: SWP_TA_OAK
+  kind: Delivery - TA
+  units: cfs
+SWP_TA_PWD:
+  name: Palmdale WD
+  code_name: SWP_TA_PWD
+  kind: Delivery - TA
+  units: cfs
+SWP_TA_SB:
+  name: Santa Barbara County FC&WCD
+  code_name: SWP_TA_SB
+  kind: Delivery - TA
+  units: cfs
+SWP_TA_SBV:
+  name: San Bernadino Valley MWD
+  code_name: SWP_TA_SBV
+  kind: Delivery - TA
+  units: cfs
+SWP_TA_SCV:
+  name: Santa Clara Valley WD
+  code_name: SWP_TA_SCV
+  kind: Delivery - TA
+  units: cfs
+SWP_TA_SGP:
+  name: San Gorgonio Pass WA
+  code_name: SWP_TA_SGP
+  kind: Delivery - TA
+  units: cfs
+SWP_TA_SGV:
+  name: San Gabriel Valley MWD
+  code_name: SWP_TA_SGV
+  kind: Delivery - TA
+  units: cfs
+SWP_TA_SLO:
+  name: San Luis Obispo County FC&WCD
+  code_name: SWP_TA_SLO
+  kind: Delivery - TA
+  units: cfs
+SWP_TA_SOLANO:
+  name: Solano County WA
+  code_name: SWP_TA_SOLANO
+  kind: Delivery - TA
+  units: cfs
+SWP_TA_TULARE:
+  name: Tulare Lake Basin WSD
+  code_name: SWP_TA_TULARE
+  kind: Delivery - TA
+  units: cfs
+SWP_TA_VC:
+  name: Ventura County FCD
+  code_name: SWP_TA_VC
+  kind: Delivery - TA
+  units: cfs
+C_CAA087:
+  name: Dos Amigos Pumping Plant
+  code_name: C_CAA087
+  kind: CAA
+  units: cfs
+C_CAA087_CVP:
+  name: Dos Amigos Pumping Plant (CVP)
+  code_name: C_CAA087_CVP
+  kind: Delivery
+  units: cfs
+C_CAA087_SWP:
+  name: Dos Amigos Pumping Plant (SWP)
+  code_name: C_CAA087_SWP
+  kind: Delivery
+  units: cfs
+C_CAA095:
+  name: Pool 15 (SLC)
+  code_name: C_CAA095
+  kind: CAA
+  units: cfs
+C_CAA109:
+  name: Pool 16 (SLC)
+  code_name: C_CAA109
+  kind: CAA
+  units: cfs
+C_CAA143:
+  name: Pool 19 (SLC)
+  code_name: C_CAA143
+  kind: CAA
+  units: cfs
+C_CAA155:
+  name: Pool 20 (SLC)
+  code_name: C_CAA155
+  kind: CAA
+  units: cfs
+C_CAA156:
+  name: Pool 20 (SLC) Delivery to Avenal, Coalinga, Huron
+  code_name: C_CAA156 
+  kind: CAA
+  units: cfs
+C_CAA165:
+  name: Pool 21 (SLC)
+  code_name: C_CAA165
+  kind: CAA
+  units: cfs
+C_CAA172:
+  name: Pool 22
+  code_name: C_CAA172
+  kind: CAA
+  units: cfs
+C_CAA173:
+  name: Pool 22, SWP Reach 8C
+  code_name: C_CAA173
+  kind: CAA
+  units: cfs
+C_CAA181:
+  name: Pool 22, SWP Reach 8C  County Of Kings
+  code_name: C_CAA181
+  kind: CAA
+  units: cfs
+C_CAA183:
+  name: Pool 22, 8C-8D  Tulare Lake Basin Wsd
+  code_name: C_CAA183
+  kind: CAA
+  units: cfs
+C_CAA184:
+  name: Pool 22, SWP Reach 8D  Dudley Ridge WD
+  code_name: C_CAA184
+  kind: CAA
+  units: cfs
+C_CAA185:
+  name: Pool 22, SWP Aqueduct Downstream of Bifurcation To Coastal Br
+  code_name: C_CAA185
+  kind: CAA
+  units: cfs
+C_CAA194:
+  name: Pool 23, SWP Reach 9-13B  KCWA
+  code_name: C_CAA194
+  kind: CAA
+  units: cfs
+C_CAA207:
+  name: Pool 24, KWB  Semitropic Element Diversion
+  code_name: C_CAA207
+  kind: CAA
+  units: cfs
+C_CAA210:
+  name: Pool 25, KCWA & KWB  Semitropic Return
+  code_name: C_CAA210
+  kind: CAA
+  units: cfs
+C_CAA220:
+  name: Pool 26
+  code_name: C_CAA220
+  kind: CAA
+  units: cfs
+C_CAA225:
+  name: Pool 27
+  code_name: C_CAA225
+  kind: Channel
+  units: cfs
+C_CAA232:
+  name: Pool 28
+  code_name: C_CAA232
+  kind: Channel
+  units: cfs
+C_CAA238:
+  name: Pool 29, CVP Cross Valley Canal  AG Diversion
+  code_name: C_CAA238
+  kind: CAA
+  units: cfs
+C_CAA239:
+  name: Pool 29, CVP Cross Valley  Refuge Diversion
+  code_name: C_CAA239
+  kind: CAA
+  units: cfs
+C_CAA240:
+  name: Pool 29, KWB  Fan Element Diversion
+  code_name: C_CAA240
+  kind: CAA
+  units: cfs
+C_CAA241:
+  name: Pool 29, KWB  Local Element Diversion
+  code_name: C_CAA241
+  kind: CAA
+  units: cfs
+C_CAA242:
+  name: Pool 29, SWP KCWA & KWB Local Elmnt Rtrn
+  code_name: C_CAA242
+  kind: CAA
+  units: cfs
+C_CAA245:
+  name: Pool 30, Buena Vista Pumping Plant 
+  code_name: C_CAA245
+  kind: CAA
+  units: cfs
+C_CAA251:
+  name: Pool 31
+  code_name: C_CAA251
+  kind: Channel
+  units: cfs
+C_CAA256:
+  name: Pool 32
+  code_name: C_CAA256
+  kind: Channel
+  units: cfs
+C_CAA262:
+  name: Pool 33, SWP Reach 14A-14C  KCWA
+  code_name: C_CAA262
+  kind: CAA
+  units: cfs
+C_CAA267:
+  name: Pool 34
+  code_name: C_CAA267
+  kind: Channel
+  units: cfs
+C_CAA271:
+  name: Pool 35
+  code_name: C_CAA271
+  kind: Channel
+  units: cfs
+C_CAA278:
+  name: Pool 36, Wheeler Ridge Pumping Plant
+  code_name: C_CAA278
+  kind: CAA
+  units: cfs
+C_CAA279:
+  name: Pool 36, SWP Reach 15A-16A  KCWA
+  code_name: C_CAA279
+  kind: CAA
+  units: cfs
+C_CAA280:
+  name: Pool 37, Chrisman Pumping Plant
+  code_name: C_CAA280
+  kind: CAA
+  units: cfs
+C_CAA283:
+  name: Pool 38
+  code_name: C_CAA283
+  kind: Channel
+  units: cfs
+C_CAA287:
+  name: Pool 39
+  code_name: C_CAA287
+  kind: Channel
+  units: cfs
+C_CAA291:
+  name: Pool 40
+  code_name: C_CAA291
+  kind: Channel
+  units: cfs
+C_CAA293:
+  name: Pool 41, Edmondston Pumping Plant
+  code_name: C_CAA293
+  kind: CAA
+  units: cfs
