@@ -1,0 +1,10 @@
+FIRST:
+  name: Test Variable 1
+  code_name: TEST1
+  kind: TEST
+  units: big_ones  
+SECOND:
+  name: Test Variable 2
+  code_name: TEST2
+  kind: TEST
+  units: big_ones 
