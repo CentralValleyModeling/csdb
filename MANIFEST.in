@@ -1,0 +1,6 @@
+graft src
+
+global-exclude *~ *.py[cod] *.so
+exclude .gitignore
+exclude .gitattributes
+exclude .pre-commit-config.yaml

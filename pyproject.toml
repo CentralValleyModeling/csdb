@@ -1,0 +1,90 @@
+[build-system]
+  requires = ["setuptools>=61.0", "wheel"]
+  build-backend = "setuptools.build_meta"
+
+
+[project]
+  authors = [
+    {name = "Zachary Roy", email = "zachary.roy@water.ca.gov"}
+  ]
+  classifiers = [
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Topic :: Software Development :: Libraries :: Python Modules"
+  ]
+  dependencies = [
+    "setuptools_scm",
+    "pandas",
+    "duckdb",
+    "duckdb-engine",
+    "pydantic",
+  ]
+  description = "A SQL tool for interacting with CalSim3 results"
+  dynamic = ["version"]
+  license = {text = "MIT"}
+  name = "csbd"
+  readme = "README.md"
+  requires-python = ">=3.11"
+
+[project.optional-dependencies]
+  test = [
+    "pytest",
+    "pytest-cov",
+  ]
+
+[project.urls]
+  repository = "https://github.com/CentralValleyModeling/csdb"
+
+[tool.coverage.report]
+  exclude_lines = [
+    "pragma: no cover",
+    # This covers both typing.TYPE_CHECKING and plain TYPE_CHECKING, 
+    # with any amount of whitespace
+    "if\\s+(typing\\.)?TYPE_CHECKING:",
+    'if __name__ == "__main__":'
+  ]
+  omit = [
+    "src/csdb/__main__.py",
+    "src/csdb/_version.py",
+    "tests/*"
+  ]
+
+[tool.distutils.bdist_wheel]
+  universal = true
+
+[tool.setuptools]
+  package-dir = {"" = "src"}
+
+[tool.setuptools.package-data]
+  "*" = ["*.*"]
+
+[tool.pytest.ini_options]
+  log_cli = true
+  log_cli_level = "DEBUG"
+  addopts = [
+    "-vv",
+    "--color=yes",
+    "--tb=native",
+    "--strict-markers",
+    "--durations=20",
+  ]
+  markers = [
+    "serial: execute test serially (to avoid race conditions)",
+    "slow: tests can take a long time (deselect with '-m \"not slow\"')"
+  ]
+  norecursedirs = [
+    ".*", 
+    "*.egg*", 
+    "build", 
+    "dist", 
+    "conda.recipe", 
+    "examples", 
+    "env", 
+    "envs", 
+    "scripts",
+  ]
+  pythonpath = [
+    "src"
+  ]

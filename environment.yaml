@@ -1,0 +1,21 @@
+name: csdb-dev
+channels:
+  - dwr-cvm
+  - cadwr-dms
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.11
+  - pip
+  - pandas
+  - setuptools-scm
+  - pyyaml
+  - duckdb
+  - duckdb-engine
+  - pydantic
+  - pytest
+  - pytest-cov
+  - pip:
+      - hecdss
+      - pydsstools
+prefix: C:\Users\zroy\AppData\Local\miniconda3\envs\csdb-dev
