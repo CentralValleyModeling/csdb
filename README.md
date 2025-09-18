@@ -1,6 +1,6 @@
 # CalSim Database
 
-> [!INFO]  
+> [!NOTE]  
 > :construction: This library is still under development, and has no Anaconda or PyPI distribution yet.
 
 A SQL tool for interacting with CalSim3 results
