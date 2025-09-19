@@ -1,2 +1,2 @@
-from .client import CalSimDatabaseClient
+from .client import Client
 from .schemas import Run, Variable

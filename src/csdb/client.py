@@ -21,7 +21,7 @@ SCHEMA_DIR = Path(__file__).parent / "default" / "sql" / "schema"
 DEFAULT_VARIABLES_YAML = Path(__file__).parent / "default" / "variables.yaml"
 
 
-class CalSimDatabaseClient:
+class Client:
     """A database client for CalSim modeling results and inputs (uses `duckdb`)"""
 
     def __init__(
@@ -36,13 +36,41 @@ class CalSimDatabaseClient:
         ----------
         src : Path
             The path to the database file.
-        fill_vars_if_new : bool | Path, optional
+        fill_vars_if_new : bool | Path | None, optional
             If Truthy, the client will fill the variable table when initializing the
             database. If True, the client uses the default variable list for CalSim
             runs. If a Path is given, that path is interpreted as the yaml file to use
             as a source of the variables, by default True
-        schema_directory : Path, optional
-            _description_, by default None
+        schema_directory : Path | None, optional
+            The path to the directory that contains the SQL schema definition files if
+            you want to extend the default schema, by default None
+
+        Examples
+        --------
+        Connect to an existing, or create a new database. For new dataabses, this
+        will initialize the variable table with a standard set of CalSim3 Variables.
+
+            >>> import csdb
+            >>> client = csdb.Client("file.db")
+
+
+        Create a a new database without initializing the variable table.
+
+            >>> import csdb
+            >>> client = csdb.Client("file.db", fill_vars_if_new=False)
+
+        Specify the yaml or csv source file to use when initalizing the variables.
+
+            >>> import csdb
+            >>> client = csdb.Client(
+                "file.db",
+                fill_vars_if_new="variables.yaml"
+            )
+
+        Raises
+        ------
+        IOError
+            Raised if `fill_vars_if_new` cannot be interpreted for the variable table
         """
         # resolve default mutable arguments
         if not isinstance(fill_vars_if_new, bool):
@@ -98,22 +126,23 @@ class CalSimDatabaseClient:
 
         Example
         -------
-        ```file.yaml
-        Shasta:
-            name: Banks Exports
-            code_name: C_CAA003
-            kind: CHANNEL
-            units: cfs
-        Oroville:
-            name: Oroville Storage
-            code_name: S_OROVL
-            kind: STORAGE
-            units: taf
-        ```
+        See below for the project.
+            ```file.yaml
+            Shasta:
+                name: Banks Exports
+                code_name: C_CAA003
+                kind: CHANNEL
+                units: cfs
+            Oroville:
+                name: Oroville Storage
+                code_name: S_OROVL
+                kind: STORAGE
+                units: taf
+            ```
 
-        >>> import csdb
-        >>> db = csdb.CalSimDatabaseClient("foo.db")
-        >>> db.put_variables_from_yaml("file.yaml")
+            >>> import csdb
+            >>> db = csdb.Client("foo.db")
+            >>> db.put_variables_from_yaml("file.yaml")
         """
         logger.info(f"adding variables from yaml={src}")
         obj: dict = io.load_yaml(src)
@@ -322,11 +351,11 @@ class CalSimDatabaseClient:
 
         Parameters
         ----------
-        name : str
+        run_name : str
             The name to use for the run in the database
         df : pd.DataFrame
             The DataFrame containing the data for the run, should have columns
-            'datetime', 'variable', 'value', and 'run'
+            'datetime', 'variable', and 'value'
         src : str | Path, optional
             The source to record for the run, if it isn't given it's recorded as the
             DataFrames memory location, by default None

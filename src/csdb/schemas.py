@@ -15,16 +15,26 @@ class CSRS_Model(BaseModel):
 
 
 class Run(CSRS_Model):
-    """Represents a single run of CalSim"""
+    """Represents a single run of CalSim
+
+    Uses pydantic to do data validation."""
 
     name: str
+    """The human readable name for the Run"""
     source: str
+    """The source of the data for the Run"""
 
 
 class Variable(CSRS_Model):
-    """Represents a State Variable or Decision Variable in CalSim3"""
+    """Represents a State Variable or Decision Variable in CalSim3
+
+    Uses pydantic to do data validation."""
 
     name: str
+    """The human readable name for the Variable"""
     code_name: str
+    """The name used in WRIMS for the Variable"""
     kind: str = Field(repr=False)
+    """The kind used in WRIMS for the Variable"""
     units: str = Field(repr=False)
+    """The units used in WRIMS for the Variable"""
