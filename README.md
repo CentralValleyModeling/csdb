@@ -12,7 +12,7 @@ Reading data already in the Database.
 ```python
 import csdb 
 
-client = csdb.CalSimDatabaseClient("database.db")
+client = csdb.Client("database.db")
 
 run, variables, df = client.get_result_by_run(run_name="Baseline")
 # Returns a DataFrame for a single run, but all variables in the database.
@@ -35,7 +35,7 @@ Add variables to the codebase (do this before you add data from a DSS file)
 ```python
 # CSV and YAML specifications are supported when creating a new database
 # see src/csdb/default/variables.yaml for an example
-client = csdb.CalSimDatabaseClient(
+client = csdb.Client(
     "new_database.db", 
     fill_vars_if_new="path/to/variables.csv",  
 )

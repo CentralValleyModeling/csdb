@@ -3,7 +3,7 @@ import logging
 import sys
 from pathlib import Path
 
-from csdb import CalSimDatabaseClient
+from csdb import Client
 
 logger = logging.getLogger(__name__)
 
@@ -48,7 +48,7 @@ def batch_upload_from_dss(
     files: list[Path],
     vars: Path | bool = True,
 ):
-    client = CalSimDatabaseClient(database, fill_vars_if_new=vars)
+    client = Client(database, fill_vars_if_new=vars)
     for f in files:
         logger.info(f"Uploading '{f.stem}': {f}")
         client.put_run_from_dss(f.stem, f)
