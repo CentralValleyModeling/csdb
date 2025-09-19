@@ -1,0 +1,2943 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../io/">
+      
+      
+        <link rel="next" href="../../how-to/put-result/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.20">
+    
+    
+      
+        <title>Default Variable Table - csdb</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.e53b48f4.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#default-variables" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="csdb" class="md-header__button md-logo" aria-label="csdb" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            csdb
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Default Variable Table
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/CentralValleyModeling/csdb" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="csdb" class="md-nav__button md-logo" aria-label="csdb" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    csdb
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/CentralValleyModeling/csdb" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Reference
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Reference
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../client/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Client
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../schemas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Schema Objects
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sql/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Database Schema
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../io/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    IO Utilities
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Default Variable Table
+    
+  </span>
+  
+
+      </a>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    How To
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            How To
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-to/put-result/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    How to add results
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-to/put-variable/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    How to add variables
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="default-variables">Default Variables</h1>
+<p>The following <a href="../sql/#variable"><code>variable</code></a> table is created for new database files if nothing is provided for the <code>fill_vars_if_new</code> argument when the <a href="../client/#csdb.Client.__init__"><code>csdb.Client</code></a> is initialized.</p>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>code_name</th>
+<th>kind</th>
+<th>units</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Alameda County FC&amp;WCD, Zone 7</td>
+<td>SWP_TA_ACFC</td>
+<td>Delivery - TA</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Alameda County WD</td>
+<td>SWP_TA_ACWD</td>
+<td>Delivery - TA</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Alder Creek (at Proposed Site of Alder Creek Reservoir)</td>
+<td>I_ALD004</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Alder Creek (below Alder Creek Diversion Dam)</td>
+<td>I_ALD002</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Angel Creek inflows to Murphys Afterbay</td>
+<td>I_ANG017</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Antelope Creek</td>
+<td>I_ANT011</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Antelope Valley-East Kern WA</td>
+<td>SWP_TA_AVEK</td>
+<td>Delivery - TA</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Banks CVP Exports</td>
+<td>C_CAA003_CVP</td>
+<td>Export</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Banks Export WTS</td>
+<td>C_CAA003_WTS</td>
+<td>Export</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Banks SWP Exports</td>
+<td>C_CAA003_SWP</td>
+<td>Export</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Battle Creek</td>
+<td>I_BTL006</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Bear Creek (Tributary to Sacramento River)</td>
+<td>I_BCN010</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Bear Creek inflows to Bear Reservoir (Merced County)</td>
+<td>I_BCK040</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Beaver Creek inflows upstream of Beaver Creek Diversion Dam</td>
+<td>I_BVC007</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Big Chico Creek</td>
+<td>I_BCC014</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Brush Creek inflow to Brush Creek Reservoir</td>
+<td>I_BSH003</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Bucks Creek inflow to Lower Bucks Creek Reservoir</td>
+<td>I_BUCKS</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Burns Creek</td>
+<td>I_BUR005</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Butte Creek inflow to Battle Creek</td>
+<td>I_BTC048</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>CT_BENDBRIDGE_SV</td>
+<td>CT_BENDBRIDGE_SV</td>
+<td>SV - Closure Term</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>CT_BUTTECITY_SV</td>
+<td>CT_BUTTECITY_SV</td>
+<td>SV - Closure Term</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>CT_COLUSA_SV</td>
+<td>CT_COLUSA_SV</td>
+<td>SV - Closure Term</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>CT_DAVIS_SV</td>
+<td>CT_DAVIS_SV</td>
+<td>SV - Closure Term</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>CT_FAIROAKS_SV</td>
+<td>CT_FAIROAKS_SV</td>
+<td>SV - Closure Term</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>CT_FREEPORT_SV</td>
+<td>CT_FREEPORT_SV</td>
+<td>SV - Closure Term</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>CT_GRAVELLYFORD_SV</td>
+<td>CT_GRAVELLYFORD_SV</td>
+<td>SV - Closure Term</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>CT_MELON_SV</td>
+<td>CT_MELON_SV</td>
+<td>SV - Closure Term</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>CT_MERCED_SV</td>
+<td>CT_MERCED_SV</td>
+<td>SV - Closure Term</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>CT_MODESTO_SV</td>
+<td>CT_MODESTO_SV</td>
+<td>SV - Closure Term</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>CT_MUDSLOUGH_SV</td>
+<td>CT_MUDSLOUGH_SV</td>
+<td>SV - Closure Term</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>CT_NICOLAUS_SV</td>
+<td>CT_NICOLAUS_SV</td>
+<td>SV - Closure Term</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>CT_OROVILLE_SV</td>
+<td>CT_OROVILLE_SV</td>
+<td>SV - Closure Term</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>CT_PARDE_SV</td>
+<td>CT_PARDE_SV</td>
+<td>SV - Closure Term</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>CT_PEDRO_SV</td>
+<td>CT_PEDRO_SV</td>
+<td>SV - Closure Term</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>CT_RIPON_SV</td>
+<td>CT_RIPON_SV</td>
+<td>SV - Closure Term</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>CT_SACSLOUGH_SV</td>
+<td>CT_SACSLOUGH_SV</td>
+<td>SV - Closure Term</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>CT_SALTSLOUGH_SV</td>
+<td>CT_SALTSLOUGH_SV</td>
+<td>SV - Closure Term</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>CT_SMARTVILLE_SV</td>
+<td>CT_SMARTVILLE_SV</td>
+<td>SV - Closure Term</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>CT_STEVINSON_SV</td>
+<td>CT_STEVINSON_SV</td>
+<td>SV - Closure Term</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>CT_VERNALIS_SV</td>
+<td>CT_VERNALIS_SV</td>
+<td>SV - Closure Term</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>CT_VERONA_SV</td>
+<td>CT_VERONA_SV</td>
+<td>SV - Closure Term</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>CT_WHEATLAND_SV</td>
+<td>CT_WHEATLAND_SV</td>
+<td>SV - Closure Term</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>CT_WILKINSSL_SV</td>
+<td>CT_WILKINSSL_SV</td>
+<td>SV - Closure Term</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>CT_WOODLAND_SV</td>
+<td>CT_WOODLAND_SV</td>
+<td>SV - Closure Term</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>CT_YOLO_SV</td>
+<td>CT_YOLO_SV</td>
+<td>SV - Closure Term</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Cache Creek inflow to Clear Lake</td>
+<td>I_CLRLK</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Calaveras River inflows to New Hogan Dam</td>
+<td>I_NHGAN</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Camp Creek</td>
+<td>I_CMP014</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Capita Canyon and minor streams</td>
+<td>I_CAP000</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Chowchilla River inflows to Eastman Lake</td>
+<td>I_ESTMN</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Clark Fork Stanislaus River inflows to Middle Fork Stanislaus</td>
+<td>I_CFS001</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Clear Creek inflow to Whiskeytown Lake</td>
+<td>I_WKYTN</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Coachella Valley WD</td>
+<td>SWP_TA_CVWD</td>
+<td>Delivery - TA</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Cole Creek</td>
+<td>I_COL003</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Corral Hollow and minor creeks</td>
+<td>I_CHC000</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Cosumnes River</td>
+<td>I_CSM035</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Cottonwood Creek</td>
+<td>I_COT033</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>County of Kings</td>
+<td>SWP_TA_KINGS</td>
+<td>Delivery - TA</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Cow Creek</td>
+<td>I_COW014</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Crestline-Line Arrowhead WA</td>
+<td>SWP_TA_CLA</td>
+<td>Delivery - TA</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Deadman and Dutchman Creeks</td>
+<td>I_DED044</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Dear Creek (inflow to Consumnes)</td>
+<td>I_DEE023</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Deer Creek near Vina</td>
+<td>I_DRC012</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Del Puerto Creek</td>
+<td>I_DPC008</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Delivery - CVP Allocation (NOD Ag)</td>
+<td>PERDV_CVPAG_SYS</td>
+<td>Allocation</td>
+<td>percent</td>
+</tr>
+<tr>
+<td>Delivery - CVP Allocation (NOD M&amp;I)</td>
+<td>PERDV_CVPMI_SYS</td>
+<td>Allocation</td>
+<td>percent</td>
+</tr>
+<tr>
+<td>Delivery - CVP Allocation (NOD RF)</td>
+<td>PERDV_CVPRF_SYS</td>
+<td>Allocation</td>
+<td>percent</td>
+</tr>
+<tr>
+<td>Delivery - CVP Allocation (NOD SC)</td>
+<td>PERDV_CVPSC_SYS</td>
+<td>Allocation</td>
+<td>percent</td>
+</tr>
+<tr>
+<td>Delivery - CVP Allocation (SOD Ag)</td>
+<td>PERDV_CVPAG_S</td>
+<td>Allocation</td>
+<td>percent</td>
+</tr>
+<tr>
+<td>Delivery - CVP Allocation (SOD EX)</td>
+<td>PERDV_CVPEX_S</td>
+<td>Allocation</td>
+<td>percent</td>
+</tr>
+<tr>
+<td>Delivery - CVP Allocation (SOD M&amp;I)</td>
+<td>PERDV_CVPMI_S</td>
+<td>Allocation</td>
+<td>percent</td>
+</tr>
+<tr>
+<td>Delivery - CVP Allocation (SOD RF)</td>
+<td>PERDV_CVPRF_S</td>
+<td>Allocation</td>
+<td>percent</td>
+</tr>
+<tr>
+<td>Delivery - CVP Delivery NOD</td>
+<td>DEL_CVP_TOTAL_N</td>
+<td>Channel</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Delivery - CVP Delivery PAG N</td>
+<td>DEL_CVP_PAG_N</td>
+<td>Channel</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Delivery - CVP Delivery PAG S</td>
+<td>DEL_CVP_PAG_S</td>
+<td>Channel</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Delivery - CVP Delivery PEX S</td>
+<td>DEL_CVP_PEX_S</td>
+<td>Channel</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Delivery - CVP Delivery PMI S</td>
+<td>DEL_CVP_PMI_S</td>
+<td>Channel</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Delivery - CVP Delivery PRF N</td>
+<td>DEL_CVP_PRF_N</td>
+<td>Channel</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Delivery - CVP Delivery PRF S</td>
+<td>DEL_CVP_PRF_S</td>
+<td>Channel</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Delivery - CVP Delivery PSC N</td>
+<td>DEL_CVP_PSC_N</td>
+<td>Channel</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Delivery - CVP Delivery SOD</td>
+<td>CVPTOTALDEL</td>
+<td>Delivery</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Delivery - CVP Delivery SOD no CVC</td>
+<td>DEL_CVP_TOTAL_S</td>
+<td>Channel</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Delivery - SHORT_CVP_TOT_N</td>
+<td>SHORT_CVP_TOT_N</td>
+<td>Shortage</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Delivery - SHORT_CVP_TOT_S</td>
+<td>SHORT_CVP_TOT_S</td>
+<td>Shortage</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Delivery - SWP Del Target TA</td>
+<td>DELTAR_A_DV</td>
+<td>Channel</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Delivery - SWP Del Target TA + CO</td>
+<td>DELTARDV_TOTAL</td>
+<td>Channel</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Delivery - SWP PERCENT DELIVERY</td>
+<td>SWP_PERDELDV</td>
+<td>Channel</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Delivery - SWP_CO_FEATH</td>
+<td>SWP_CO_FEATH</td>
+<td>Channel</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Delivery - SWP_CO_NBAY</td>
+<td>SWP_CO_NBAY</td>
+<td>Channel</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Delivery - SWP_IN_FEATH</td>
+<td>SWP_IN_FEATH</td>
+<td>Channel</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Delivery - SWP_IN_NBAY</td>
+<td>SWP_IN_NBAY</td>
+<td>Channel</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Delivery - SWP_LOSS</td>
+<td>SWP_LOSS</td>
+<td>Channel</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Delivery - SWP_TA_FEATH</td>
+<td>SWP_TA_FEATH</td>
+<td>Channel</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Delivery - SWP_TA_NBAY</td>
+<td>SWP_TA_NBAY</td>
+<td>Channel</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Delta - Additional Delta Outflow (NDOI)</td>
+<td>NDOI_ADD</td>
+<td>Channel</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Delta - Additional Outflow for ANN (NDOI)</td>
+<td>NDOI_ADD_ANN</td>
+<td>Channel</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Delta - Additional Outflow for CVP (NDOI)</td>
+<td>NDOI_ADD_CVP</td>
+<td>Channel</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Delta - Additional Outflow for SWP (NDOI)</td>
+<td>NDOI_ADD_SWP</td>
+<td>Channel</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Delta - Banks Exports</td>
+<td>D_OMR027_CAA000</td>
+<td>Channel</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Delta - CCWD</td>
+<td>D408</td>
+<td>Channel</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Delta - DXC Flow</td>
+<td>D_SAC030_MOK014</td>
+<td>Channel</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Delta - Delta Outflow (NDOI)</td>
+<td>NDOI</td>
+<td>Channel</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Delta - Flow at Georgiana Slough</td>
+<td>C_SAC029B</td>
+<td>Delta</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Delta - Flow at Rio Vista</td>
+<td>C_SAC017</td>
+<td>Delta</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Delta - Flow below DXC</td>
+<td>C_SAC030</td>
+<td>Delta</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Delta - Jones Exports</td>
+<td>D_OMR028_DMC000</td>
+<td>Channel</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Delta - Modeled Required DO</td>
+<td>MRDO_FINALDV</td>
+<td>Channel</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Delta - Required Delta Outflow for NDO and X2</td>
+<td>NDOI_MIN</td>
+<td>Allocation</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Delta - Total NDD Exports</td>
+<td>EXPORTACTUALIF</td>
+<td>Channel</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Delta - Total TD Exports</td>
+<td>EXPORTACTUALTD</td>
+<td>Channel</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Delta Inflow</td>
+<td>DELTAINFLOWFORNDOI</td>
+<td>Delta</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Desert WA</td>
+<td>SWP_TA_DESERT</td>
+<td>Delivery - TA</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Dos Amigos Pumping Plant</td>
+<td>C_CAA087</td>
+<td>CAA</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Dos Amigos Pumping Plant (CVP)</td>
+<td>C_CAA087_CVP</td>
+<td>Delivery</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Dos Amigos Pumping Plant (SWP)</td>
+<td>C_CAA087_SWP</td>
+<td>Delivery</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Dry Creek (Merced)</td>
+<td>I_DCM027</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Dry Creek (Tuolumne)</td>
+<td>I_DCT050</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Dry Creek and Berenda Creek</td>
+<td>I_DBC024</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Dry Creek and Hutchinson Creek</td>
+<td>I_DHC021</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Dry Creek and Secret Creek</td>
+<td>I_DSC035</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Dudley Ridge WD</td>
+<td>SWP_TA_DUDLEY</td>
+<td>Delivery - TA</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Duncan Canyon Creek</td>
+<td>I_DCC010</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Echo Lake</td>
+<td>I_ECHOL</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Elder Creek</td>
+<td>I_ELD027</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Empire West Side ID</td>
+<td>SWP_TA_EMPIRE</td>
+<td>Delivery - TA</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>French Dry Creek inflow to Merle Collins Lake</td>
+<td>I_MERLC</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Frenchman Lake inflows</td>
+<td>I_FRMAN</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Fresno River inflows to Hensley Lake</td>
+<td>I_HNSLY</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Fresno Slough</td>
+<td>I_FSL012</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Garzas Creek</td>
+<td>I_GRZ012</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Highland Creek</td>
+<td>I_SPICE</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Honcut Creek</td>
+<td>I_HON021</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Hospital and Ingram Creeks</td>
+<td>I_ING008</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Inflow To Hetch Hetchy Reservoir</td>
+<td>I_HTCHY</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Inflow to  Antelope Lake</td>
+<td>I_ANTLP</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Inflow to Beardsley Lake</td>
+<td>I_BEARD</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Inflow to Butt Valley Reservoir</td>
+<td>I_BTVLY</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Inflow to Canyon Creek at Towle Canal Diversion Dam</td>
+<td>I_CYN009</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Inflow to Caples Lake</td>
+<td>I_CAPLS</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Inflow to Claire Engle (Trinity) Lake</td>
+<td>I_TRNTY</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Inflow to Davis Lake</td>
+<td>I_DAVIS</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Inflow to Donnells Lake</td>
+<td>I_DONLL</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Inflow to Fordyce Lake</td>
+<td>I_FRDYC</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Inflow to French Lake</td>
+<td>I_FRNCH</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Inflow to French Meadows Reservoir</td>
+<td>I_FRMDW</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Inflow to Ice House Reservoir</td>
+<td>I_ICEHS</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Inflow to Jackson Meadows</td>
+<td>I_JKSMD</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Inflow to Lake Almanor</td>
+<td>I_ALMNR</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Inflow to Lake Berryessa</td>
+<td>I_PTH070</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Inflow to Lake Eleanor</td>
+<td>I_ELENR</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Inflow to Lake Lloyd/Cherry Lake</td>
+<td>I_LLOYD</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Inflow to Lake Valley Reservoir (NF American River)</td>
+<td>I_LKVLY</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Inflow to Loon Lake</td>
+<td>I_LOONL</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Inflow to Lyons Reservoir</td>
+<td>I_LYONS</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Inflow to Mountain Meadows Reservoir</td>
+<td>I_MTMDW</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Inflow to Pinecrest Lake</td>
+<td>I_PCRST</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Inflow to Round Valley and Philbrook Reservoirs</td>
+<td>I_RVPHB</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Inflow to Rubicon Reservoir</td>
+<td>I_RUB047</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Inflow to Salt Springs Reservoir</td>
+<td>I_SLTSP</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Inflow to Shasta Lake</td>
+<td>I_SHSTA</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Inflow to Silver Lake</td>
+<td>I_SILVR</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Inflow to South Fork of Deer Creek downstream Deer Crk Powerhouse</td>
+<td>I_SFD003</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Inflow to Stumpy Meadows Reservoir</td>
+<td>I_STMPY</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Inflow to Union Valley Reservoir</td>
+<td>I_UNVLY</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Inflow to Upper Bear River Reservoir</td>
+<td>I_UBEAR</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Inflows from Minor North-East Streams to Sacramento River</td>
+<td>I_MNS000</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Jackson Creek inflow to Jackson Reservoir</td>
+<td>I_AMADR</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>James Bypass</td>
+<td>I_JBP006</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Jones CVP Exports</td>
+<td>C_DMC000_CVP</td>
+<td>Export</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Kellogg Creek Inflow to Los Vaqueros Reservoir</td>
+<td>I_LOSVQ</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Kennedy Creek Inflow to MF Stanislaus River</td>
+<td>I_MFS047</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Kern Counta WA</td>
+<td>SWP_IN_KERN</td>
+<td>Delivery - IN</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Kern County WA (Ag)</td>
+<td>SWP_TA_KERNAG</td>
+<td>Delivery - TA</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Kern County WA (MI)</td>
+<td>SWP_TA_KERNMI</td>
+<td>Delivery - TA</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Little Chico Creek</td>
+<td>I_LCC038</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Little Dry Creek</td>
+<td>I_LDC029</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Little Panoche Creek</td>
+<td>I_LPC007</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Little Rubicon River inflow to Buck Island Lake</td>
+<td>I_LRB004</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Littlejohns Creek</td>
+<td>I_LJC022</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Littlerock Creek ID</td>
+<td>SWP_TA_LCID</td>
+<td>Delivery - TA</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Local Inflow to MF Stanislaus River at Sand Bar Diversion Dam</td>
+<td>I_MFS013</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Local Inflow to Mokelumne River above Pardee Reservoir</td>
+<td>I_MOK079</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Local Inflow to NF Mokelumne River</td>
+<td>I_NFM010</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Local Inflow to Pardee Reservoir</td>
+<td>I_PARDE</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Local inflow from Cottonwood Creek to San Joaquin River</td>
+<td>I_SJR265</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Local inflow from Little Dry Creek to San Joaquin River</td>
+<td>I_SJR258</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Local inflow to Black Butte Resrvoir</td>
+<td>I_BLKBT</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Local inflow to Bowman Lake</td>
+<td>I_BOWMN</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Local inflow to Calaveras River at Bellota Weir</td>
+<td>I_CLV026</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Local inflow to Camanche Reservoir</td>
+<td>I_CMCHE</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Local inflow to Camp Far West Reservoir</td>
+<td>I_CMPFW</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Local inflow to Chowchilla River below Buchanan Dam</td>
+<td>I_CHW031</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Local inflow to Combie Reservoir</td>
+<td>I_CMBIE</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Local inflow to Deer Creek at Lake Wildwood</td>
+<td>I_DER004</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Local inflow to Deer Creek near Smartville</td>
+<td>I_DER001</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Local inflow to East Branch NF Feather River below Antelope Lake</td>
+<td>I_EBF001</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Local inflow to Englebright Reservoir</td>
+<td>I_ENGLB</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Local inflow to Folsom Lake</td>
+<td>I_FOLSM</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Local inflow to Fresno River below Hidden Dam near Daulton</td>
+<td>I_FRS046</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Local inflow to Garden Bar Dam Site</td>
+<td>I_BRR023</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Local inflow to Gerle Reservoir</td>
+<td>I_GERLE</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Local inflow to Grizzly Creek upstream of Grizzly Forebay</td>
+<td>I_GZL009</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Local inflow to Hell Hole Reservoir</td>
+<td>I_HHOLE</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Local inflow to Lake McClure</td>
+<td>I_MCLRE</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Local inflow to Lake Oroville</td>
+<td>I_OROVL</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Local inflow to Lewiston Reservoir</td>
+<td>I_LWSTN</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Local inflow to Long Canyon Creek</td>
+<td>I_LNG012</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Local inflow to MF Stanislaus River above Hells Half Acre Bridge</td>
+<td>I_MFS022</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Local inflow to MF Yuba River</td>
+<td>I_MFY013</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Local inflow to Merced River at Merced Falls Diversion Dam</td>
+<td>I_MCD055</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Local inflow to Middle Fork American River</td>
+<td>I_MFA025</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Local inflow to Middle Fork American River at Interbay Dam</td>
+<td>I_MFA036</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Local inflow to Middle Fork American River near Auburn</td>
+<td>I_MFA001</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Local inflow to Middle Fork American River near Foresthill</td>
+<td>I_MFA023</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Local inflow to Middle Fork Feather River near Merrimac</td>
+<td>I_MFF019</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Local inflow to Middle Fork Feather River near Portola</td>
+<td>I_MFF087</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Local inflow to NF American River</td>
+<td>I_NNA013</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Local inflow to NF American River at Auburn Tunnel Pump Station Diversion</td>
+<td>I_NFA016</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Local inflow to NF American River at North Fork Dam</td>
+<td>I_NFA022</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Local inflow to NF Feather River above Poe Dam</td>
+<td>I_NFF029</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Local inflow to NF Stanislaus River below Beaver Creek</td>
+<td>I_NFS005</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Local inflow to NF Stanislaus River near Avery</td>
+<td>I_NFS009</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Local inflow to New Bullards Bar Reservoir</td>
+<td>I_NBLDB</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Local inflow to New Melones Reservoir</td>
+<td>I_STS072</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Local inflow to Pilot Creek downstream of Georgetown</td>
+<td>I_PLC007</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Local inflow to Pyramid Creek at Twin Bridges</td>
+<td>I_PYR001</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Local inflow to Rollins Reservoir</td>
+<td>I_RLLNS</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Local inflow to Rubicon River near Foresthill</td>
+<td>I_RUB002</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Local inflow to SF Stanislaus River</td>
+<td>I_SFS030</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Local inflow to SF Yuba River</td>
+<td>I_SFY007</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Local inflow to Scotts Flat</td>
+<td>I_SCOTF</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Local inflow to Silver Creek at Camino Reservoir</td>
+<td>I_SLV006</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Local inflow to Silver Creek at Junction Reservoir</td>
+<td>I_SLV015</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Local inflow to Silver Fork American River at Proposed Diversion for Alder Creek Reservoir</td>
+<td>I_SLF009</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Local inflow to South Fork American River near Forni Creek</td>
+<td>I_SFA076</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Local inflow to South Fork American River near Kyburz</td>
+<td>I_SFA066</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Local inflow to South Fork American River near Placerville</td>
+<td>I_SFA030</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Local inflow to South Fork Feather River at Enterprise</td>
+<td>I_SFF008</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Local inflow to South Fork Feather River at Ponderosa Reservoir</td>
+<td>I_SFF011</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Local inflow to South Fork Stanislaus River above Strawberry</td>
+<td>I_SFS033</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Local inflow to Spaulding Reservoir</td>
+<td>I_SPLDG</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Local inflow to Stanislaus River below Tulloch Reservoir</td>
+<td>I_STS059</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Local inflow to Stony Gorge Reservoir</td>
+<td>I_SGRGE</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Local inflow to Tullock Reservoir</td>
+<td>I_TULOC</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Local inflow to Tuolumne River at LaGrange Dam</td>
+<td>I_TUO054</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Local inflow to WB Feather River at Miocene Diversion Dam</td>
+<td>I_WBF015</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Local inflow to WB Feather River at Yankee Hill</td>
+<td>I_WBF006</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Local inflows Camp Creek below Sly Park Creek Confluence</td>
+<td>I_CMP001</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Local inflows to Cache Creek downstream of Rumsey</td>
+<td>I_CCH053</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Local inflows to Cache Creek from Bear Creek</td>
+<td>I_BRC003</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Local inflows to Clear Creek at Igo</td>
+<td>I_CLR011</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Local inflows to San Luis Reservoir</td>
+<td>I_SLUIS</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Los Banos Creek inflows to Los Banos Reservoir</td>
+<td>I_BANOS</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Mariposa Creek</td>
+<td>I_MPS038</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Marsh Creek inflows to the Delta</td>
+<td>I_MSH015</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Metropolitan WDSC</td>
+<td>SWP_TA_MWD</td>
+<td>Delivery - TA</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Middle Fork Mokelumne River</td>
+<td>I_MFM008</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Mill Creek</td>
+<td>I_MLC006</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Mills Creek</td>
+<td>I_MIL003</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Mojave WA</td>
+<td>SWP_TA_MWA</td>
+<td>Delivery - TA</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>NF Cache Creek inflow to Indian Valley Reservoir</td>
+<td>I_INDVL</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Napa County FC&amp;WCD</td>
+<td>SWP_TA_NAPA</td>
+<td>Delivery - TA</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>North Fork American River</td>
+<td>I_NFA054</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>North Fork Stanislaus River</td>
+<td>I_NFS033</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>North Fork Yuba River and local inflows</td>
+<td>I_NFY029</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>North Fork of Long Canyon Creek</td>
+<td>I_NLC003</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>North Fork of Middle Fork American River</td>
+<td>I_NMA003</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>North and Middle Forks Cottonwood Creek (Near Olinda)</td>
+<td>I_CWD018</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Oak Flat WD</td>
+<td>SWP_TA_OAK</td>
+<td>Delivery - TA</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Old and Middle River flow</td>
+<td>C_OMR014</td>
+<td>Delta</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Oregon Creek</td>
+<td>I_OGN005</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Orestimba Creek</td>
+<td>I_ORT014</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Ortigalita Creek</td>
+<td>I_ORG000</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Other - Banks Export Cross Valley Pumping</td>
+<td>C_CAA003_CVC</td>
+<td>Export</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Other - Banks PP North Delta</td>
+<td>C_CAA003_IF</td>
+<td>Export</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Other - Banks PP SWP Through Delta</td>
+<td>C_CAA003_SWP_TD</td>
+<td>Export</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Other - Banks PP Through Delta</td>
+<td>C_CAA003_TD</td>
+<td>Export</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Other - Jones PP North Delta</td>
+<td>C_DMC000_IF</td>
+<td>Export</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Other - Jones PP Through Delta</td>
+<td>C_DMC000_TD</td>
+<td>Export</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Other - SHORT_SWP_TOTAL (Cumulative)</td>
+<td>SHORT_SWP_TOTA</td>
+<td>Shortage</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Other - SWP Allocation (FRSA)</td>
+<td>PERDV_SWP_FSC</td>
+<td>Allocation</td>
+<td>percent</td>
+</tr>
+<tr>
+<td>Other - SWP Allocation (M&amp;I)</td>
+<td>PERDV_SWP_MWD1</td>
+<td>Allocation</td>
+<td>percent</td>
+</tr>
+<tr>
+<td>Other - SWP Delivery Int</td>
+<td>DEL_SWP_PIN</td>
+<td>Channel</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Other - SWP North of Delta Shortage (Cumulative)</td>
+<td>SHORT_SWP_TOT_N</td>
+<td>Shortage</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Other - SWP South of Delta Shortage (Cumulative)</td>
+<td>SHORT_SWP_TOT_S</td>
+<td>Shortage</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Owens Creek</td>
+<td>I_OWN040</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Palmdale WD</td>
+<td>SWP_TA_PWD</td>
+<td>Delivery - TA</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Paynes and Sevenmile creeks</td>
+<td>I_PYN001</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Plum Creek</td>
+<td>I_PLM001</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Pool 15 (SLC)</td>
+<td>C_CAA095</td>
+<td>CAA</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Pool 16 (SLC)</td>
+<td>C_CAA109</td>
+<td>CAA</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Pool 19 (SLC)</td>
+<td>C_CAA143</td>
+<td>CAA</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Pool 20 (SLC)</td>
+<td>C_CAA155</td>
+<td>CAA</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Pool 20 (SLC) Delivery to Avenal, Coalinga, Huron</td>
+<td>C_CAA156</td>
+<td>CAA</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Pool 21 (SLC)</td>
+<td>C_CAA165</td>
+<td>CAA</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Pool 22</td>
+<td>C_CAA172</td>
+<td>CAA</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Pool 22, 8C-8D  Tulare Lake Basin Wsd</td>
+<td>C_CAA183</td>
+<td>CAA</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Pool 22, SWP Aqueduct Downstream of Bifurcation To Coastal Br</td>
+<td>C_CAA185</td>
+<td>CAA</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Pool 22, SWP Reach 8C</td>
+<td>C_CAA173</td>
+<td>CAA</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Pool 22, SWP Reach 8C  County Of Kings</td>
+<td>C_CAA181</td>
+<td>CAA</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Pool 22, SWP Reach 8D  Dudley Ridge WD</td>
+<td>C_CAA184</td>
+<td>CAA</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Pool 23, SWP Reach 9-13B  KCWA</td>
+<td>C_CAA194</td>
+<td>CAA</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Pool 24, KWB  Semitropic Element Diversion</td>
+<td>C_CAA207</td>
+<td>CAA</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Pool 25, KCWA &amp; KWB  Semitropic Return</td>
+<td>C_CAA210</td>
+<td>CAA</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Pool 26</td>
+<td>C_CAA220</td>
+<td>CAA</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Pool 27</td>
+<td>C_CAA225</td>
+<td>Channel</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Pool 28</td>
+<td>C_CAA232</td>
+<td>Channel</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Pool 29, CVP Cross Valley  Refuge Diversion</td>
+<td>C_CAA239</td>
+<td>CAA</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Pool 29, CVP Cross Valley Canal  AG Diversion</td>
+<td>C_CAA238</td>
+<td>CAA</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Pool 29, KWB  Fan Element Diversion</td>
+<td>C_CAA240</td>
+<td>CAA</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Pool 29, KWB  Local Element Diversion</td>
+<td>C_CAA241</td>
+<td>CAA</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Pool 29, SWP KCWA &amp; KWB Local Elmnt Rtrn</td>
+<td>C_CAA242</td>
+<td>CAA</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Pool 30, Buena Vista Pumping Plant</td>
+<td>C_CAA245</td>
+<td>CAA</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Pool 31</td>
+<td>C_CAA251</td>
+<td>Channel</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Pool 32</td>
+<td>C_CAA256</td>
+<td>Channel</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Pool 33, SWP Reach 14A-14C  KCWA</td>
+<td>C_CAA262</td>
+<td>CAA</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Pool 34</td>
+<td>C_CAA267</td>
+<td>Channel</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Pool 35</td>
+<td>C_CAA271</td>
+<td>Channel</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Pool 36, SWP Reach 15A-16A  KCWA</td>
+<td>C_CAA279</td>
+<td>CAA</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Pool 36, Wheeler Ridge Pumping Plant</td>
+<td>C_CAA278</td>
+<td>CAA</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Pool 37, Chrisman Pumping Plant</td>
+<td>C_CAA280</td>
+<td>CAA</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Pool 38</td>
+<td>C_CAA283</td>
+<td>Channel</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Pool 39</td>
+<td>C_CAA287</td>
+<td>Channel</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Pool 40</td>
+<td>C_CAA291</td>
+<td>Channel</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Pool 41, Edmondston Pumping Plant</td>
+<td>C_CAA293</td>
+<td>CAA</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Pyramid Creek inflow to Lake Aloha</td>
+<td>I_ALOHA</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Quinto Creek</td>
+<td>I_QNT005</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Relief Creek</td>
+<td>I_RLIEF</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Rock Creek</td>
+<td>I_RCK001</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>SWP Article 21 Deliveries</td>
+<td>SWP_IN_TOTAL</td>
+<td>Delivery</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>SWP Carryover Deliveries</td>
+<td>SWP_CO_TOTAL</td>
+<td>Delivery</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>SWP Table A Deliveries</td>
+<td>SWP_TA_TOTAL</td>
+<td>Delivery</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Sac R. Flow Above Fremont Weir</td>
+<td>C_SAC085</td>
+<td>Upstream Flows</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Sac R. Flow at Freeport</td>
+<td>C_SAC048</td>
+<td>Upstream Flows</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Sac R. Flow at Hood</td>
+<td>C_SAC041</td>
+<td>Upstream Flows</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Sac R. Flow at RedBluff</td>
+<td>C_SAC240</td>
+<td>Upstream Flows</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Sac R. Flow at Verona</td>
+<td>C_SAC083</td>
+<td>Upstream Flows</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Sac R. Flow at Wilkins Slough</td>
+<td>C_SAC097</td>
+<td>Upstream Flows</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Sacramento Valley Index (SVI) WYT Classification</td>
+<td>WYT_SAC_</td>
+<td>Channel</td>
+<td>index</td>
+</tr>
+<tr>
+<td>Salado Creek</td>
+<td>I_SLO007</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Salinity - EM EC</td>
+<td>EM_EC_MONTH</td>
+<td>Channel</td>
+<td>ec</td>
+</tr>
+<tr>
+<td>Salinity - JP EC</td>
+<td>JP_EC_MONTH</td>
+<td>Channel</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Salinity - RS EC</td>
+<td>RS_EC_MONTH</td>
+<td>Salinity</td>
+<td>ec</td>
+</tr>
+<tr>
+<td>Salinity - X2 Position prev</td>
+<td>X2_PRV</td>
+<td>Channel</td>
+<td>km</td>
+</tr>
+<tr>
+<td>San Bernadino Valley MWD</td>
+<td>SWP_TA_SBV</td>
+<td>Delivery - TA</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>San Gabriel Valley MWD</td>
+<td>SWP_TA_SGV</td>
+<td>Delivery - TA</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>San Gorgonio Pass WA</td>
+<td>SWP_TA_SGP</td>
+<td>Delivery - TA</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>San Joaquin River inflows to Millerton Reservoir</td>
+<td>I_MLRTN</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>San Luis Obispo County FC&amp;WCD</td>
+<td>SWP_TA_SLO</td>
+<td>Delivery - TA</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Santa Barbara County FC&amp;WCD</td>
+<td>SWP_TA_SB</td>
+<td>Delivery - TA</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Santa Clara Valley WD</td>
+<td>SWP_TA_SCV</td>
+<td>Delivery - TA</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Santa Clarita WA (San Joaquin)</td>
+<td>SWP_TA_CLWA1</td>
+<td>Delivery - TA</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Santa Clarita WA (South Coast)</td>
+<td>SWP_TA_CLWA2</td>
+<td>Delivery - TA</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Slab Creek inflow to South Fork American River at Slab Creek Reservoir</td>
+<td>I_SFA040</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Slate Creek</td>
+<td>I_SLT009</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Sly Creek</td>
+<td>I_SLYCK</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Sly Park Creek and Hazel Creek inflow to Jenkinson Lake</td>
+<td>I_JNKSN</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Solano County WA</td>
+<td>SWP_TA_SOLANO</td>
+<td>Delivery - TA</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>South Fork Cottonwood Creek</td>
+<td>I_SCW008</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>South Fork Feather River</td>
+<td>I_LGRSV</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>South Fork Long Canyon Creek</td>
+<td>I_SLC003</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>South Fork Mokelumne River</td>
+<td>I_SFM005</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>South Fork Rubicon River</td>
+<td>I_SFR006</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>South Fork Yuba River Near Cisco</td>
+<td>I_SFY048</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Stony Creek inflow to East Park Dam</td>
+<td>I_EPARK</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Storage - Castaic Lake Storage</td>
+<td>S_CSTIC</td>
+<td>Reservoir Storage</td>
+<td>taf</td>
+</tr>
+<tr>
+<td>Storage - Folsom Storage</td>
+<td>S_FOLSM</td>
+<td>Reservoir Storage</td>
+<td>taf</td>
+</tr>
+<tr>
+<td>Storage - Friant Storage</td>
+<td>S_MLRTN</td>
+<td>Reservoir Storage</td>
+<td>taf</td>
+</tr>
+<tr>
+<td>Storage - Lake Del Valle Storage</td>
+<td>S_DELVE</td>
+<td>Reservoir Storage</td>
+<td>taf</td>
+</tr>
+<tr>
+<td>Storage - Lake Perris Storage</td>
+<td>S_PRRIS</td>
+<td>Reservoir Storage</td>
+<td>taf</td>
+</tr>
+<tr>
+<td>Storage - Los Vaqueros Reservoir</td>
+<td>S_LOSVQ</td>
+<td>Reservoir Storage</td>
+<td>taf</td>
+</tr>
+<tr>
+<td>Storage - McClure Storage</td>
+<td>S_MCLRE</td>
+<td>Reservoir Storage</td>
+<td>taf</td>
+</tr>
+<tr>
+<td>Storage - New Don Pedro Storage</td>
+<td>S_PEDRO</td>
+<td>Reservoir Storage</td>
+<td>taf</td>
+</tr>
+<tr>
+<td>Storage - New Melones Storage</td>
+<td>S_MELON</td>
+<td>Reservoir Storage</td>
+<td>taf</td>
+</tr>
+<tr>
+<td>Storage - Oroville Storage</td>
+<td>S_OROVL</td>
+<td>Reservoir Storage</td>
+<td>taf</td>
+</tr>
+<tr>
+<td>Storage - Pyramid Lake Storage</td>
+<td>S_PYRMD</td>
+<td>Reservoir Storage</td>
+<td>taf</td>
+</tr>
+<tr>
+<td>Storage - San Luis Storage - CVP</td>
+<td>S_SLUIS_CVP</td>
+<td>Reservoir Storage</td>
+<td>taf</td>
+</tr>
+<tr>
+<td>Storage - San Luis Storage - SWP</td>
+<td>S_SLUIS_SWP</td>
+<td>Reservoir Storage</td>
+<td>taf</td>
+</tr>
+<tr>
+<td>Storage - Shasta Storage</td>
+<td>S_SHSTA</td>
+<td>Reservoir Storage</td>
+<td>taf</td>
+</tr>
+<tr>
+<td>Storage - Silverwood Lake Storage</td>
+<td>S_SVRWD</td>
+<td>Reservoir Storage</td>
+<td>taf</td>
+</tr>
+<tr>
+<td>Storage - Trinity Storage</td>
+<td>S_TRNTY</td>
+<td>Reservoir Storage</td>
+<td>taf</td>
+</tr>
+<tr>
+<td>Storage - Whiskeytown</td>
+<td>S_WKYTN</td>
+<td>Reservoir Storage</td>
+<td>taf</td>
+</tr>
+<tr>
+<td>Texas, Fall, and Rucker Creeks</td>
+<td>I_LCBRF</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Thomes Creek</td>
+<td>I_THM028</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Tiger Creek</td>
+<td>I_TGC003</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Total Banks Exports</td>
+<td>C_CAA003</td>
+<td>Export</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Total Delta Outflow</td>
+<td>C_SAC000</td>
+<td>Delta</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Total Jones Exports</td>
+<td>C_DMC000</td>
+<td>Export</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Tulare Lake Basin WSD</td>
+<td>SWP_TA_TULARE</td>
+<td>Delivery - TA</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Tuolumne River inflows to New Don Pedro Dam</td>
+<td>I_PEDRO</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Upstream Flows - Fremont Weir spills</td>
+<td>SP_SAC083_YBP037</td>
+<td>Channel</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Upstream Flows - Sacramento Weir spills</td>
+<td>SP_SAC066_YBP020</td>
+<td>Channel</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Ventura County FCD</td>
+<td>SWP_TA_VC</td>
+<td>Delivery - TA</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Weber Creek</td>
+<td>I_WBR001</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>West Branch Feather River</td>
+<td>I_WBF030</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+<tr>
+<td>Wolf Creek</td>
+<td>I_WLF013</td>
+<td>SV - Inflow</td>
+<td>cfs</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>
