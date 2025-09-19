@@ -31,6 +31,7 @@ client.put_run_from_dss("New Run", "path/to/dss/file.dss")
 ```
 
 Add variables to the codebase (do this before you add data from a DSS file)
+
 ```python
 # CSV and YAML specifications are supported when creating a new database
 # see src/csdb/default/variables.yaml for an example
