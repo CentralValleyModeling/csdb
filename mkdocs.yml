@@ -1,0 +1,34 @@
+site_name: csdb
+
+theme:
+  name: "material"
+
+plugins:
+- mkdocstrings:
+    default_handler: python
+    handlers:
+        python:
+          paths: [src]
+          options:
+            docstring_style: numpy
+            show_root_toc_entry: false
+            heading_level: 3
+            members_order: source
+
+markdown_extensions:
+  - toc:
+      toc_depth: 4
+
+nav:
+- Home: index.md
+- Reference:
+  - Client: api/client.md
+  - Schema Objects: api/schemas.md
+  - Database Schema: api/sql.md
+  - IO Utilities: api/io.md
+  - Default Variable Table: api/default-variables.md
+- How To:
+  - How to add results: how-to/put-result.md
+  - How to add variables: how-to/put-variable.md
+
+repo_url: https://github.com/CentralValleyModeling/csdb
