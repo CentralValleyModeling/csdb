@@ -5,6 +5,9 @@
 tests/data
 tests/assets/created
 
+# GitHub Pages source
+site/
+
 # dss files
 *.dss
 *.ds[kcd]
