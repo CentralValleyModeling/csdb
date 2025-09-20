@@ -5,6 +5,10 @@
 
 A SQL tool for interacting with CalSim3 results
 
+## References, How-Tos, and Tutorials
+
+[Check out our read-the-docs page: csdb](https://centralvalleymodeling.github.io/csdb/)
+
 ## Example Usage
 
 Reading data already in the Database.
