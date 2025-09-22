@@ -22,7 +22,44 @@ DEFAULT_VARIABLES_YAML = Path(__file__).parent / "default" / "variables.yaml"
 
 
 class Client:
-    """A database client for CalSim modeling results and inputs (uses `duckdb`)"""
+    """A database client for CalSim modeling results and inputs (uses `duckdb`)
+
+    Parameters
+    ----------
+    src : Path
+        The path to the database file.
+    fill_vars_if_new : bool | Path | None, optional
+        If Truthy, the client will fill the variable table when initializing the
+        database. If True, the client uses the default variable list for CalSim
+        runs. If a Path is given, that path is interpreted as the yaml file to use
+        as a source of the variables, by default True
+    schema_directory : Path | None, optional
+        The path to the directory that contains the SQL schema definition files if
+        you want to extend the default schema, by default None
+
+    Example
+    -------
+    Connect to an existing, or create a new database. For new dataabses, this
+    will initialize the variable table with a standard set of CalSim3 Variables.
+
+        >>> import csdb
+        >>> client = csdb.Client("file.db")
+
+    Create a a new database without initializing the variable table.
+
+        >>> import csdb
+        >>> client = csdb.Client("file.db", fill_vars_if_new=False)
+
+    Specify the yaml or csv source file to use when initalizing the variables.
+
+        >>> import csdb
+        >>> client = csdb.Client(src="file.db", fill_vars_if_new="variables.yaml")
+
+    Raises
+    ------
+    IOError
+        Raised if `fill_vars_if_new` cannot be interpreted for the variable table
+    """
 
     def __init__(
         self,
@@ -30,48 +67,6 @@ class Client:
         fill_vars_if_new: bool | Path = True,
         schema_directory: Path | None = None,
     ):
-        """Initialize the client and the database (if it doens't exist).
-
-        Parameters
-        ----------
-        src : Path
-            The path to the database file.
-        fill_vars_if_new : bool | Path | None, optional
-            If Truthy, the client will fill the variable table when initializing the
-            database. If True, the client uses the default variable list for CalSim
-            runs. If a Path is given, that path is interpreted as the yaml file to use
-            as a source of the variables, by default True
-        schema_directory : Path | None, optional
-            The path to the directory that contains the SQL schema definition files if
-            you want to extend the default schema, by default None
-
-        Examples
-        --------
-        Connect to an existing, or create a new database. For new dataabses, this
-        will initialize the variable table with a standard set of CalSim3 Variables.
-
-            >>> import csdb
-            >>> client = csdb.Client("file.db")
-
-
-        Create a a new database without initializing the variable table.
-
-            >>> import csdb
-            >>> client = csdb.Client("file.db", fill_vars_if_new=False)
-
-        Specify the yaml or csv source file to use when initalizing the variables.
-
-            >>> import csdb
-            >>> client = csdb.Client(
-                "file.db",
-                fill_vars_if_new="variables.yaml"
-            )
-
-        Raises
-        ------
-        IOError
-            Raised if `fill_vars_if_new` cannot be interpreted for the variable table
-        """
         # resolve default mutable arguments
         if not isinstance(fill_vars_if_new, bool):
             variables_src_file = Path(fill_vars_if_new)
@@ -126,23 +121,26 @@ class Client:
 
         Example
         -------
-        See below for the project.
-            ```file.yaml
-            Shasta:
-                name: Banks Exports
-                code_name: C_CAA003
-                kind: CHANNEL
-                units: cfs
-            Oroville:
-                name: Oroville Storage
-                code_name: S_OROVL
-                kind: STORAGE
-                units: taf
-            ```
+        Given a yaml file like this:
+
+        ```yaml title="file.yaml"
+        Shasta:
+            name: Banks Exports
+            code_name: C_CAA003
+            kind: CHANNEL
+            units: cfs
+        Oroville:
+            name: Oroville Storage
+            code_name: S_OROVL
+            kind: STORAGE
+            units: taf
+        ```
+
+        Add that data to the database like this:
 
             >>> import csdb
-            >>> db = csdb.Client("foo.db")
-            >>> db.put_variables_from_yaml("file.yaml")
+            >>> client = csdb.Client("foo.db")
+            >>> client.put_variables_from_yaml("file.yaml")
         """
         logger.info(f"adding variables from yaml={src}")
         obj: dict = io.load_yaml(src)
@@ -172,6 +170,22 @@ class Client:
         ----------
         df : pd.DataFrame
             The dataframe of variables to be added.
+
+        Example
+        -------
+        Given a dataframe like this:
+
+        | name             | code_name | kind    | units |
+        | ----             | --------- | ----    | ----- |
+        | Banks Exports    | C_CAA003  | CHANNEL | cfs   |
+        | Oroville Storage | S_OROVL   | STORAGE | taf   |
+
+        Add that data to the database like this:
+
+            >>> import csdb
+            >>> client = csdb.Client("foo.db")
+            >>> df = pd.DataFrame(...)
+            >>> client.put_variables_from_dataframe(df)
         """
         df.columns = [c.lower() for c in df.columns]
         logger.info(f"adding {len(df)} variables from dataframe")
@@ -201,6 +215,22 @@ class Client:
         ----------
         src : Path
             The csv of variables to be added.
+
+        Example
+        -------
+        Given a csv like this:
+
+        ```csv title="file.csv"
+        name,code_name,kind,units
+        Banks Exports,C_CAA003,CHANNEL,cfs
+        Oroville Storage,S_OROVL,STORAGE,taf
+        ```
+
+        Add that data to the database like this:
+
+            >>> import csdb
+            >>> client = csdb.Client("foo.db")
+            >>> client.put_variables_from_csv("file.csv")
         """
         logger.info(f"adding variables from csv={src}")
         df = pd.read_csv(src)
@@ -219,6 +249,17 @@ class Client:
             The WRESL+ 'kind' used in CalSim
         units: str
             The WRESL+ 'units' used in CalSim
+
+        Example
+        -------
+            >>> import csdb
+            >>> client = csdb.Client("foo.db")
+            >>> client.put_variable(
+                name="New Variable",
+                code_name="NEWVAR",
+                kind="EXAMPLE",
+                units="OLYMPICSWIMMINGPOOLS"
+            )
         """
         with duckdb.connect(self.__src, read_only=False) as conn:
             data = f"'{name}', '{code_name}', '{kind}', '{units}'"
@@ -239,6 +280,13 @@ class Client:
         -------
         schemas.Variable
             The Variable object that contains the metadata for that CalSim variable
+
+        Example
+        -------
+            >>> import csdb
+            >>> client = csdb.Client("foo.db")
+            >>> variable = client.get_variable(code_name="S_OROVL")
+            csdb.Variable(name="Oroville Storage", code_name="S_OROVL", ...)
 
         Raises
         ------
@@ -276,6 +324,15 @@ class Client:
             A copy of the table as a DataFrame. Modifications to this table will not
             impact the database
 
+        Example
+        -------
+            >>> import csdb
+            >>> client = csdb.Client("foo.db")
+            >>> variable = client.get_table_as_dataframe(table_name="run")
+                name    source
+            0   RUN1    source/file/for/the/run1.dss
+            1   RUN2    source/file/for/the/run2.dss
+
         Raises
         ------
         ValueError
@@ -296,6 +353,16 @@ class Client:
         -------
         pd.DataFrame
             The table relating run.name and the count of unique variable.code_name.
+
+        Example
+        -------
+            >>> import csdb
+            >>> client = csdb.Client("foo.db")
+            >>> client.get_variable_counts
+                        variable_counts
+            run_name
+            RUN1        42
+            RUN2        256
         """
         with duckdb.connect(self.__src, read_only=True) as conn:
             s = (
@@ -364,6 +431,14 @@ class Client:
         -------
         tuple[schemas.Run, list[schemas.Variable], pd.DataFrame]
             The Run obejct, Variable objects, and pivoted DataFrame for the Run affected
+
+        Example
+        -------
+            >>> import csdb
+            >>> import pandas as pd
+            >>> client = csdb.Client("foo.db")
+            >>> df = pd.DataFrame(...)
+            >>> client.put_run_from_dataframe("Example Run", df, src="Custom calcs")
 
         Raises
         ------
@@ -441,6 +516,12 @@ class Client:
         -------
         tuple[schemas.Run, list[schemas.Variable], pd.DataFrame]
             The Run obejct, Variable objects, and pivoted DataFrame for the Run affected
+
+        Example
+        -------
+            >>> import csdb
+            >>> client = csdb.Client("foo.db")
+            >>> client.put_run_from_dss("Example Run", src="foo.dss")
         """
         # Get the current set of variables to know what datasets to read from the DSS
         df_variables = (
@@ -463,6 +544,12 @@ class Client:
         ----------
         run_name : str
             The name of the run to remove
+
+        Example
+        -------
+            >>> import csdb
+            >>> client = csdb.Client("foo.db")
+            >>> client.delete_run("BAD_RUN_OOPS")
         """
         with duckdb.connect(self.__src, read_only=False) as conn:
             # First delete results
@@ -494,6 +581,28 @@ class Client:
         -------
         tuple[schemas.Run, list[schemas.Variable], pd.DataFrame]
             The Run obejct, Variable objects, and pivoted DataFrame of the data added
+
+        Example
+        -------
+            >>> import csdb
+            >>> client = csdb.Client("file.db")
+            >>> run, variables, df = client.get_result_by_run(
+                run_name="DCR 3000 - Baseline",
+            )
+            >>> run
+            csdb.Run(name='DCR 3000 - Baseline', source='file.dss')
+
+            >>> variables
+            [csdb.Variable(name='Example Variable 1', code_name='VAR1'), csdb.Variable(...), ...]
+
+            >>> df
+                        VAR1    VAR2    VAR3
+            datetime
+            1921-10-31  12.3    1.23    0.123
+            1921-11-30  45.6    4.56    0.456
+            1921-12-31  78.9    7.89    0.789
+            ...         ...     ...     ...
+            2021-09-30  78.9    7.89    0.789
         """
         run_obj = self._get_run(run_name)
         with duckdb.connect(self.__src, read_only=True) as conn:
@@ -525,6 +634,28 @@ class Client:
         -------
         tuple[list[schemas.Run], schemas.Variable, pd.DataFrame]
             The Run obejcts, Variable object, and pivoted DataFrame of the data added
+
+        Example
+        -------
+            >>> import csdb
+            >>> client = csdb.Client("file.db")
+            >>> run, variables, df = client.get_result_by_variable(
+                code_name="S_OROVL",
+            )
+            >>> run
+            [csdb.Run(name='RUN 1', source='file1.dss'), csdb.Run(...), ...]
+
+            >>> variables
+            csdb.Variable(name='Oroville Storage', code_name='S_OROVL')
+
+            >>> df
+                        RUN 1   RUN 2   RUN 2
+            datetime
+            1921-10-31  12.3    1.23    0.123
+            1921-11-30  45.6    4.56    0.456
+            1921-12-31  78.9    7.89    0.789
+            ...         ...     ...     ...
+            2021-09-30  78.9    7.89    0.789
         """
         variable_object = self.get_variable(code_name=code_name)
         with duckdb.connect(self.__src, read_only=True) as conn:
