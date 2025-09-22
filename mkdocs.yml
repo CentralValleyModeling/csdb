@@ -30,5 +30,6 @@ nav:
 - How To:
   - How to add results: how-to/put-result.md
   - How to add variables: how-to/put-variable.md
+  - How to get results: how-to/get-result.md
 
 repo_url: https://github.com/CentralValleyModeling/csdb
