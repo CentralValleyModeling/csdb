@@ -1,4 +1,4 @@
-# `csdb`
+# CalSim Database
 
 This site contains the project documentation for the `csdb` project.
 
