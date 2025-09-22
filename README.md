@@ -76,5 +76,3 @@ Then, set up the conda environment with the developer dependencies.
 ```cmd
 >>> conda env create -f environment.yaml -y
 ```
-
-Then you're done!
