@@ -30,28 +30,28 @@ See below for guides on how to add run results to a database file. These guides 
 
 === "From a `DataFrame`"
 
-Adding data from a `DataFrame` is a little more complex than adding it from DSS, in that you need to make sure the `DataFrame` is formatted correctly. The format expected is:
+    Adding data from a `DataFrame` is a little more complex than adding it from DSS, in that you need to make sure the `DataFrame` is formatted correctly. The format expected is:
 
-| datetime                   | value           | variable       |
-| --------                   | -----           | --------       |
-| 1921-10-30 (`pd.Datetime`) | 1.23 (`float`)  | V_VAR (`str`)  |
+    | datetime                   | value           | variable       |
+    | --------                   | -----           | --------       |
+    | 1921-10-30 (`pd.Datetime`) | 1.23 (`float`)  | V_VAR (`str`)  |
 
-Additionally, the following requirements must also be met:
+    Additionally, the following requirements must also be met:
 
-1. Combinations of `datetime` and `variable` cannot be duplicated.
-2. The `variable` must be a known `code_name` in the [`variable`](../api/sql.md#variable) table.
-3. If the `run_name` specified is already in the database, the data in the database will be overwritten.
-4. If you don't provide a `src` argument, the client will just record the memory id for the dataframe that you provide. This won't be very helpful if you want to figure out where the data came from later.
+    1. Combinations of `datetime` and `variable` cannot be duplicated.
+    2. The `variable` must be a known `code_name` in the [`variable`](../api/sql.md#variable) table.
+    3. If the `run_name` specified is already in the database, the data in the database will be overwritten.
+    4. If you don't provide a `src` argument, the client will just record the memory id for the dataframe that you provide. This won't be very helpful if you want to figure out where the data came from later.
 
-```python
-import csdb
-import pandas as pd
+    ```python
+    import csdb
+    import pandas as pd
 
-df = pd.DataFrame(...)
-client = csdb.Client("file.db")
-run, variables, df = client.put_run_from_dataframe(
-    run_name="DCR 3000 - Baseline",
-    df=df,
-    src="Upload from DataFrame by Sir Robin"
-)
-```
+    df = pd.DataFrame(...)
+    client = csdb.Client("file.db")
+    run, variables, df = client.put_run_from_dataframe(
+        run_name="DCR 3000 - Baseline",
+        df=df,
+        src="Upload from DataFrame by Sir Robin"
+    )
+    ```
