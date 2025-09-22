@@ -1,6 +1,6 @@
 # Default Variables
 
-The following [`variable`](sql.md#variable) table is created for new database files if nothing is provided for the `fill_vars_if_new` argument when the [`csdb.Client`](client.md#csdb.Client.__init__) is initialized.
+The following [`variable`](sql.md#variable) table is created for new database files if nothing is provided for the `fill_vars_if_new` argument when the [`csdb.Client`](client.md#csdb.Client) is initialized.
 
 | name | code_name | kind | units |
 | ---- | --------- | ---- | ----- |

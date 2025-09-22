@@ -2,6 +2,8 @@ site_name: csdb
 
 theme:
   name: "material"
+  features:
+    - content.code.copy
 
 plugins:
 - mkdocstrings:
@@ -18,6 +20,9 @@ plugins:
 markdown_extensions:
   - toc:
       toc_depth: 4
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
 
 nav:
 - Home: index.md

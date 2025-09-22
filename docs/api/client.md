@@ -1,5 +1,5 @@
 # Client
 
-This is the gatekeeper, and is what you will likely be interacting with the most.
+The `Client` object is the gatekeeper to the database, and is what you will likely be interacting with the most.
 
 ::: csdb.Client
