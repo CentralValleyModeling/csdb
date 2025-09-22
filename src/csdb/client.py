@@ -22,7 +22,11 @@ DEFAULT_VARIABLES_YAML = Path(__file__).parent / "default" / "variables.yaml"
 
 
 class Client:
-    """A database client for CalSim modeling results and inputs (uses `duckdb`)
+    """`csdb.Client` is database client for CalSim modeling results that uses `duckdb`
+
+    `Client` provides multiple convienient methods that themselves execute SQL queries
+    to read, add, and remove data from the duckdb database on disk. The methods are
+    simply convieniences in interacting with this database.
 
     Parameters
     ----------
