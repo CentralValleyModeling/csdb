@@ -434,19 +434,6 @@
         
       
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    How to add variables
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -458,43 +445,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#from-yaml" class="md-nav__link">
-    <span class="md-ellipsis">
-      From YAML
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#from-csv" class="md-nav__link">
-    <span class="md-ellipsis">
-      From CSV
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
       
     </li>
   
@@ -551,32 +501,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#from-yaml" class="md-nav__link">
-    <span class="md-ellipsis">
-      From YAML
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#from-csv" class="md-nav__link">
-    <span class="md-ellipsis">
-      From CSV
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -596,7 +520,9 @@
 
 <h1 id="how-to-add-data-to-the-database">How to Add Data to the Database</h1>
 <p>See below for guides on how to add variables to a database file. These guides assume you have <code>csdb</code> installed.</p>
-<h2 id="from-yaml">From YAML</h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">YAML</label><label for="__tabbed_1_2">CSV</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <p>The expected format of the <code>yaml</code> file is a mapping of mappings (nested <code>dict</code>s in Python vocabulary). The keys of the outer mappings are ignored by <code>csdb</code>. The keys of the inner mapping should be:</p>
 <ul>
 <li><code>name</code>: A human readable name for the variable</li>
@@ -605,27 +531,28 @@
 <li><code>units</code>: The WRESL+ 'units' used in CalSim</li>
 </ul>
 <p>These directly correspond to the arguments in the <a href="../../api/client/#csdb.Client.put_variable"><code>csbd.Client.put_variable</code></a> method. See below for an example <code>yaml</code> file.</p>
-<pre><code class="language-yaml">Shasta:
-    name: Banks Exports
-    code_name: C_CAA003
-    kind: CHANNEL
-    units: cfs
-Oroville:
-    name: Oroville Storage
-    code_name: S_OROVL
-    kind: STORAGE
-    units: taf
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="nt">Shasta</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Banks Exports</span>
+<span class="w">    </span><span class="nt">code_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">C_CAA003</span>
+<span class="w">    </span><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CHANNEL</span>
+<span class="w">    </span><span class="nt">units</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cfs</span>
+<span class="nt">Oroville</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Oroville Storage</span>
+<span class="w">    </span><span class="nt">code_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">S_OROVL</span>
+<span class="w">    </span><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">STORAGE</span>
+<span class="w">    </span><span class="nt">units</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">taf</span>
+</code></pre></div>
 <p>The code below would add variables to a databse.</p>
-<pre><code class="language-python">import csdb
-db = csdb.Client(&quot;foo.db&quot;)
-db.put_variables_from_yaml(&quot;variables.yaml&quot;)
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">csdb</span>
+<span class="n">db</span> <span class="o">=</span> <span class="n">csdb</span><span class="o">.</span><span class="n">Client</span><span class="p">(</span><span class="s2">&quot;foo.db&quot;</span><span class="p">)</span>
+<span class="n">db</span><span class="o">.</span><span class="n">put_variables_from_yaml</span><span class="p">(</span><span class="s2">&quot;variables.yaml&quot;</span><span class="p">)</span>
+</code></pre></div>
 <p>Additionally, you can use this <code>yaml</code> file as the initialization table when creating a new database file.</p>
-<pre><code class="language-python">import csdb
-db = csdb.Client(&quot;foo.db&quot;, fill_vars_if_new=&quot;variables.yaml&quot;)
-</code></pre>
-<h2 id="from-csv">From CSV</h2>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">csdb</span>
+<span class="n">db</span> <span class="o">=</span> <span class="n">csdb</span><span class="o">.</span><span class="n">Client</span><span class="p">(</span><span class="s2">&quot;foo.db&quot;</span><span class="p">,</span> <span class="n">fill_vars_if_new</span><span class="o">=</span><span class="s2">&quot;variables.yaml&quot;</span><span class="p">)</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
 <p>The expected format of the <code>csv</code> file is a table with one row per variable to be added. The following columns should be present.</p>
 <ul>
 <li><code>name</code>: A human readable name for the variable</li>
@@ -659,14 +586,17 @@ db = csdb.Client(&quot;foo.db&quot;, fill_vars_if_new=&quot;variables.yaml&quot;
 </tbody>
 </table>
 <p>The code below would add variables to a databse.</p>
-<pre><code class="language-python">import csdb
-db = csdb.Client(&quot;foo.db&quot;)
-db.put_variables_from_csv(&quot;variables.csv&quot;)
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">csdb</span>
+<span class="n">db</span> <span class="o">=</span> <span class="n">csdb</span><span class="o">.</span><span class="n">Client</span><span class="p">(</span><span class="s2">&quot;foo.db&quot;</span><span class="p">)</span>
+<span class="n">db</span><span class="o">.</span><span class="n">put_variables_from_csv</span><span class="p">(</span><span class="s2">&quot;variables.csv&quot;</span><span class="p">)</span>
+</code></pre></div>
 <p>Additionally, you can use this <code>csv</code> file as the initialization table when creating a new database file.</p>
-<pre><code class="language-python">import csdb
-db = csdb.Client(&quot;foo.db&quot;, fill_vars_if_new=&quot;variables.csv&quot;)
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">csdb</span>
+<span class="n">db</span> <span class="o">=</span> <span class="n">csdb</span><span class="o">.</span><span class="n">Client</span><span class="p">(</span><span class="s2">&quot;foo.db&quot;</span><span class="p">,</span> <span class="n">fill_vars_if_new</span><span class="o">=</span><span class="s2">&quot;variables.csv&quot;</span><span class="p">)</span>
+</code></pre></div>
+</div>
+</div>
+</div>
 
 
 
@@ -715,7 +645,7 @@ db = csdb.Client(&quot;foo.db&quot;, fill_vars_if_new=&quot;variables.csv&quot;)
     
     
       
-      <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>

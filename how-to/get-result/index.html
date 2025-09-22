@@ -455,19 +455,6 @@
         
       
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    How to get results
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -479,43 +466,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#all-variables-for-one-run" class="md-nav__link">
-    <span class="md-ellipsis">
-      All Variables for One Run
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#all-runs-for-one-variable" class="md-nav__link">
-    <span class="md-ellipsis">
-      All Runs for One Variable
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
       
     </li>
   
@@ -549,32 +499,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#all-variables-for-one-run" class="md-nav__link">
-    <span class="md-ellipsis">
-      All Variables for One Run
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#all-runs-for-one-variable" class="md-nav__link">
-    <span class="md-ellipsis">
-      All Runs for One Variable
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -594,27 +518,29 @@
 
 <h1 id="how-to-get-data-from-the-database">How to Get Data from the Database</h1>
 <p>See below for guides on how to get run results from a database file. These guides assume you have <code>csdb</code> installed.</p>
-<h2 id="all-variables-for-one-run">All Variables for One Run</h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">All Variables for 1 Run</label><label for="__tabbed_1_2">All Runs for 1 Variable</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <p>If you want to look at multiple outputs for a single run (kind of like pulling one whole DSS out of the database), you should use <a href="../../api/client/#csdb.Client.get_result_by_run"><code>csdb.Client.get_result_by_run</code></a>.</p>
-<pre><code class="language-python">import csdb
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">csdb</span>
 
-client = csdb.Client(&quot;file.db&quot;)
-run, variables, df = client.get_result_by_run(
-    run_name=&quot;DCR 3000 - Baseline&quot;,
-)
-</code></pre>
+<span class="n">client</span> <span class="o">=</span> <span class="n">csdb</span><span class="o">.</span><span class="n">Client</span><span class="p">(</span><span class="s2">&quot;file.db&quot;</span><span class="p">)</span>
+<span class="n">run</span><span class="p">,</span> <span class="n">variables</span><span class="p">,</span> <span class="n">df</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get_result_by_run</span><span class="p">(</span>
+    <span class="n">run_name</span><span class="o">=</span><span class="s2">&quot;DCR 3000 - Baseline&quot;</span><span class="p">,</span>
+<span class="p">)</span>
+</code></pre></div>
 <p>The data returned from this method is:</p>
 <ul>
-<li>A <a href="../../api/schemas/#csdb.Run"><code>csdb.Run</code></a> object that represents the metadata about the run that you queried.</li>
-<li>A <code>list</code> of <a href="../../api/schemas/#csdb.Variable"><code>csdb.Variable</code></a> objects that represent the metadata about the variables that the database had for this run.</li>
+<li>A <a href="../../api/schemas/#run"><code>csdb.Run</code></a> object that represents the metadata about the run that you queried.</li>
+<li>A <code>list</code> of <a href="../../api/schemas/#variable"><code>csdb.Variable</code></a> objects that represent the metadata about the variables that the database had for this run.</li>
 <li>A <code>pandas.DataFrame</code> containing timeseries data for the run you queried.</li>
 </ul>
 <p>The data might look like:</p>
-<pre><code class="language-cmd">&gt;&gt;&gt; run
-csdb.Run(name='DCR 3000 - Baseline', source='file.dss')
+<div class="highlight"><pre><span></span><code>&gt;&gt;&gt; run
+csdb.Run(name=&#39;DCR 3000 - Baseline&#39;, source=&#39;file.dss&#39;)
 
 &gt;&gt;&gt; variables
-[csdb.Variable(name='Example Variable 1', code_name='VAR1'), csdb.Variable(...), ...]
+[csdb.Variable(name=&#39;Example Variable 1&#39;, code_name=&#39;VAR1&#39;), csdb.Variable(...), ...]
 
 &gt;&gt;&gt; df
             VAR1    VAR2    VAR3
@@ -624,29 +550,29 @@ datetime
 1921-12-31  78.9    7.89    0.789
 ...         ...     ...     ...
 2021-09-30  78.9    7.89    0.789
-</code></pre>
-<h2 id="all-runs-for-one-variable">All Runs for One Variable</h2>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
 <p>If you want to look at multiple runs for a single variable (kind of like reading multiple DSS files and concatenating the results), you should use <a href="../../api/client/#csdb.Client.get_result_by_variable"><code>csdb.Client.get_result_by_variable</code></a>.</p>
-<pre><code class="language-python">
-import csdb
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">csdb</span>
 
-client = csdb.Client(&quot;file.db&quot;)
-runs, variable, df = client.get_result_by_variable(
-    code_name=&quot;S_OROVL&quot;,
-)
-</code></pre>
+<span class="n">client</span> <span class="o">=</span> <span class="n">csdb</span><span class="o">.</span><span class="n">Client</span><span class="p">(</span><span class="s2">&quot;file.db&quot;</span><span class="p">)</span>
+<span class="n">runs</span><span class="p">,</span> <span class="n">variable</span><span class="p">,</span> <span class="n">df</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get_result_by_variable</span><span class="p">(</span>
+    <span class="n">code_name</span><span class="o">=</span><span class="s2">&quot;S_OROVL&quot;</span><span class="p">,</span>
+<span class="p">)</span>
+</code></pre></div>
 <p>The data returned from this method is:</p>
 <ul>
-<li>A <code>list</code> of <a href="../../api/schemas/#csdb.Run"><code>csdb.Run</code></a> objects that represent the metadata about the run that the database had for this variable.</li>
-<li>A <a href="../../api/schemas/#csdb.Variable"><code>csdb.Variable</code></a> object that represents the metadata about the variable that you queried.</li>
+<li>A <code>list</code> of <a href="../../api/schemas/#run"><code>csdb.Run</code></a> objects that represent the metadata about the run that the database had for this variable.</li>
+<li>A <a href="../../api/schemas/#variable"><code>csdb.Variable</code></a> object that represents the metadata about the variable that you queried.</li>
 <li>A <code>pandas.DataFrame</code> containing timeseries data for the variable you queried.</li>
 </ul>
 <p>The data might look like:</p>
-<pre><code class="language-cmd">&gt;&gt;&gt; run
-[csdb.Run(name='RUN 1', source='file1.dss'), csdb.Run(...), ...]
+<div class="highlight"><pre><span></span><code>&gt;&gt;&gt; run
+[csdb.Run(name=&#39;RUN 1&#39;, source=&#39;file1.dss&#39;), csdb.Run(...), ...]
 
 &gt;&gt;&gt; variables
-csdb.Variable(name='Oroville Storage', code_name='S_OROVL')
+csdb.Variable(name=&#39;Oroville Storage&#39;, code_name=&#39;S_OROVL&#39;)
 
 &gt;&gt;&gt; df
             RUN 1   RUN 2   RUN 2
@@ -656,7 +582,10 @@ datetime
 1921-12-31  78.9    7.89    0.789
 ...         ...     ...     ...
 2021-09-30  78.9    7.89    0.789
-</code></pre>
+</code></pre></div>
+</div>
+</div>
+</div>
 
 
 
@@ -705,7 +634,7 @@ datetime
     
     
       
-      <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>

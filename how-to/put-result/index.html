@@ -411,19 +411,6 @@
         
       
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    How to add results
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -435,43 +422,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#from-dss" class="md-nav__link">
-    <span class="md-ellipsis">
-      From DSS
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#from-pandasdataframe" class="md-nav__link">
-    <span class="md-ellipsis">
-      From pandas.DataFrame
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
       
     </li>
   
@@ -551,32 +501,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#from-dss" class="md-nav__link">
-    <span class="md-ellipsis">
-      From DSS
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#from-pandasdataframe" class="md-nav__link">
-    <span class="md-ellipsis">
-      From pandas.DataFrame
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -596,7 +520,9 @@
 
 <h1 id="how-to-add-data-to-the-database">How to Add Data to the Database</h1>
 <p>See below for guides on how to add run results to a database file. These guides assume you have <code>csdb</code> installed.</p>
-<h2 id="from-dss">From DSS</h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">From DSS</label><label for="__tabbed_1_2">From a <code>DataFrame</code></label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <p>Generally, adding data from DSS is pretty straight-forward. At a high level, the following steps should be all you need to do.</p>
 <ol>
 <li>Specify the variables you want to extract from the DSS file.</li>
@@ -608,16 +534,19 @@
 <li>Create your own specification file in either the CSV or YAML format. If you choose this option, see the <a href="../put-variable/">how to create your own variable table</a> page.</li>
 </ul>
 <p>The rest of this how-to guide assumes you want to use the default list of variables (we skip to step 2 listed above).</p>
-<pre><code class="language-python">import csdb
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">csdb</span>
 
-client = csdb.Client(&quot;file.db&quot;)
-run, variables, df = client.put_run_from_dss(
-    run_name=&quot;DCR 3000 - Baseline&quot;,
-    src=&quot;path/to/file.dss&quot;
-)
-</code></pre>
+<span class="n">client</span> <span class="o">=</span> <span class="n">csdb</span><span class="o">.</span><span class="n">Client</span><span class="p">(</span><span class="s2">&quot;file.db&quot;</span><span class="p">)</span>
+<span class="n">run</span><span class="p">,</span> <span class="n">variables</span><span class="p">,</span> <span class="n">df</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">put_run_from_dss</span><span class="p">(</span>
+    <span class="n">run_name</span><span class="o">=</span><span class="s2">&quot;DCR 3000 - Baseline&quot;</span><span class="p">,</span>
+    <span class="n">src</span><span class="o">=</span><span class="s2">&quot;path/to/file.dss&quot;</span>
+<span class="p">)</span>
+</code></pre></div>
 <p>This will look at the DSS file (version 6 and 7 supported) for each of the  <code>code_name</code> values from the <a href="../../api/sql/#variable"><code>variable</code></a> table, checking the DSS catalog B parts for matches. For found matches, the data will be copied into the <a href="../../api/sql/#result"><code>result</code></a> table.</p>
-<h2 id="from-pandasdataframe">From <code>pandas.DataFrame</code></h2>
+</div>
+<div class="tabbed-block"></div>
+</div>
+</div>
 <p>Adding data from a <code>DataFrame</code> is a little more complex than adding it from DSS, in that you need to make sure the <code>DataFrame</code> is formatted correctly. The format expected is:</p>
 <table>
 <thead>
@@ -642,17 +571,17 @@ run, variables, df = client.put_run_from_dss(
 <li>If the <code>run_name</code> specified is already in the database, the data in the database will be overwritten.</li>
 <li>If you don't provide a <code>src</code> argument, the client will just record the memory id for the dataframe that you provide. This won't be very helpful if you want to figure out where the data came from later.</li>
 </ol>
-<pre><code class="language-python">import csdb
-import pandas as pd
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">csdb</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
 
-df = pd.DataFrame(...)
-client = csdb.Client(&quot;file.db&quot;)
-run, variables, df = client.put_run_from_dataframe(
-    run_name=&quot;DCR 3000 - Baseline&quot;,
-    df=df,
-    src=&quot;Upload from DataFrame by Sir Robin&quot;
-)
-</code></pre>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="n">client</span> <span class="o">=</span> <span class="n">csdb</span><span class="o">.</span><span class="n">Client</span><span class="p">(</span><span class="s2">&quot;file.db&quot;</span><span class="p">)</span>
+<span class="n">run</span><span class="p">,</span> <span class="n">variables</span><span class="p">,</span> <span class="n">df</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">put_run_from_dataframe</span><span class="p">(</span>
+    <span class="n">run_name</span><span class="o">=</span><span class="s2">&quot;DCR 3000 - Baseline&quot;</span><span class="p">,</span>
+    <span class="n">df</span><span class="o">=</span><span class="n">df</span><span class="p">,</span>
+    <span class="n">src</span><span class="o">=</span><span class="s2">&quot;Upload from DataFrame by Sir Robin&quot;</span>
+<span class="p">)</span>
+</code></pre></div>
 
 
 
@@ -701,7 +630,7 @@ run, variables, df = client.put_run_from_dataframe(
     
     
       
-      <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>

@@ -735,14 +735,14 @@
 <h1 id="database-schema">Database Schema</h1>
 <h2 id="table-definitions">Table Definitions</h2>
 <h3 id="run"><code>run</code></h3>
-<pre><code class="language-sql">CREATE TABLE IF NOT EXISTS run (
-        id INTEGER,
-        name VARCHAR NOT NULL, 
-        source VARCHAR NOT NULL,
-        PRIMARY KEY (id), 
-        UNIQUE (name)
-);
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="k">IF</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">EXISTS</span><span class="w"> </span><span class="n">run</span><span class="w"> </span><span class="p">(</span>
+<span class="w">        </span><span class="n">id</span><span class="w"> </span><span class="nb">INTEGER</span><span class="p">,</span>
+<span class="w">        </span><span class="n">name</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span><span class="w"> </span>
+<span class="w">        </span><span class="k">source</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">        </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">id</span><span class="p">),</span><span class="w"> </span>
+<span class="w">        </span><span class="k">UNIQUE</span><span class="w"> </span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+<span class="p">);</span>
+</code></pre></div>
 <h4 id="example-run-table">Example <code>run</code> table</h4>
 <table>
 <thead>
@@ -766,16 +766,16 @@
 </tbody>
 </table>
 <h3 id="variable"><code>variable</code></h3>
-<pre><code class="language-sql">CREATE TABLE IF NOT EXISTS variable (
-        id INTEGER,
-        name VARCHAR NOT NULL, 
-        code_name VARCHAR NOT NULL, 
-        kind VARCHAR NOT NULL, 
-        units VARCHAR NOT NULL,
-        PRIMARY KEY (id),
-        CONSTRAINT unique_variable UNIQUE (code_name)
-);
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="k">IF</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">EXISTS</span><span class="w"> </span><span class="k">variable</span><span class="w"> </span><span class="p">(</span>
+<span class="w">        </span><span class="n">id</span><span class="w"> </span><span class="nb">INTEGER</span><span class="p">,</span>
+<span class="w">        </span><span class="n">name</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span><span class="w"> </span>
+<span class="w">        </span><span class="n">code_name</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span><span class="w"> </span>
+<span class="w">        </span><span class="n">kind</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span><span class="w"> </span>
+<span class="w">        </span><span class="n">units</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<span class="w">        </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">id</span><span class="p">),</span>
+<span class="w">        </span><span class="k">CONSTRAINT</span><span class="w"> </span><span class="n">unique_variable</span><span class="w"> </span><span class="k">UNIQUE</span><span class="w"> </span><span class="p">(</span><span class="n">code_name</span><span class="p">)</span>
+<span class="p">);</span>
+</code></pre></div>
 <h4 id="example-variable-table">Example <code>variable</code> table</h4>
 <table>
 <thead>
@@ -812,16 +812,16 @@
 </tbody>
 </table>
 <h3 id="result"><code>result</code></h3>
-<pre><code class="language-sql">CREATE TABLE IF NOT EXISTS result (
-        datetime DATE NOT NULL, 
-        value FLOAT NOT NULL, 
-        run_id INTEGER NOT NULL, 
-        variable_id INTEGER NOT NULL, 
-        CONSTRAINT unique_datapoint UNIQUE (run_id, variable_id, datetime), 
-        FOREIGN KEY(run_id) REFERENCES run (id), 
-        FOREIGN KEY(variable_id) REFERENCES variable (id)
-);
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="k">IF</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">EXISTS</span><span class="w"> </span><span class="k">result</span><span class="w"> </span><span class="p">(</span>
+<span class="w">        </span><span class="n">datetime</span><span class="w"> </span><span class="nb">DATE</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span><span class="w"> </span>
+<span class="w">        </span><span class="n">value</span><span class="w"> </span><span class="nb">FLOAT</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span><span class="w"> </span>
+<span class="w">        </span><span class="n">run_id</span><span class="w"> </span><span class="nb">INTEGER</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span><span class="w"> </span>
+<span class="w">        </span><span class="n">variable_id</span><span class="w"> </span><span class="nb">INTEGER</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span><span class="w"> </span>
+<span class="w">        </span><span class="k">CONSTRAINT</span><span class="w"> </span><span class="n">unique_datapoint</span><span class="w"> </span><span class="k">UNIQUE</span><span class="w"> </span><span class="p">(</span><span class="n">run_id</span><span class="p">,</span><span class="w"> </span><span class="n">variable_id</span><span class="p">,</span><span class="w"> </span><span class="n">datetime</span><span class="p">),</span><span class="w"> </span>
+<span class="w">        </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="p">(</span><span class="n">run_id</span><span class="p">)</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">run</span><span class="w"> </span><span class="p">(</span><span class="n">id</span><span class="p">),</span><span class="w"> </span>
+<span class="w">        </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="p">(</span><span class="n">variable_id</span><span class="p">)</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="k">variable</span><span class="w"> </span><span class="p">(</span><span class="n">id</span><span class="p">)</span>
+<span class="p">);</span>
+</code></pre></div>
 <h4 id="example-result-table">Example <code>result</code> table</h4>
 <table>
 <thead>
@@ -1033,7 +1033,7 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>
