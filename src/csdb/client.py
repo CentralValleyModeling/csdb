@@ -30,7 +30,7 @@ class Client:
 
     Parameters
     ----------
-    src : Path
+    src : Path | str
         The path to the database file.
     fill_vars_if_new : bool | Path | None, optional
         If Truthy, the client will fill the variable table when initializing the
@@ -67,10 +67,11 @@ class Client:
 
     def __init__(
         self,
-        src: Path,
+        src: Path | str,
         fill_vars_if_new: bool | Path = True,
         schema_directory: Path | None = None,
     ):
+        src = Path(src)
         # resolve default mutable arguments
         if not isinstance(fill_vars_if_new, bool):
             variables_src_file = Path(fill_vars_if_new)
