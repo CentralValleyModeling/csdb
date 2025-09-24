@@ -5,4 +5,4 @@ duckdb-engine>=0.15
 pydantic>=2.11
 hecdss>=0.1
 pydsstools>=2.4
-yaml>=0.2
+pyyaml>=6.0

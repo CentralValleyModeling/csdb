@@ -22,7 +22,7 @@
     "pydantic",
     "hecdss",
     "pydsstools",
-    "yaml"
+    "pyyaml"
   ]
   description = "A SQL tool for interacting with CalSim3 results"
   dynamic = ["version"]
