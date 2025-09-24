@@ -21,7 +21,8 @@
     "duckdb-engine",
     "pydantic",
     "hecdss",
-    "pydsstools"
+    "pydsstools",
+    "yaml"
   ]
   description = "A SQL tool for interacting with CalSim3 results"
   dynamic = ["version"]
