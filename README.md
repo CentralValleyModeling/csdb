@@ -3,6 +3,8 @@
 > [!NOTE]  
 > :construction: This library is still under development, and has no Anaconda or PyPI distribution yet.
 
+[![tests](https://github.com/CentralValleyModeling/csdb/actions/workflows/python-testing.yaml/badge.svg)](https://github.com/CentralValleyModeling/csdb/actions/workflows/python-testing.yaml)
+
 A SQL tool for interacting with CalSim3 results
 
 ## References, How-Tos, and Tutorials
@@ -71,8 +73,10 @@ Begin by cloning the repository:
 git clone https://github.com/CentralValleyModeling/csdb.git
 ```
 
-Then, set up the conda environment with the developer dependencies.
+Then, set up the virtual environment with the developer dependencies.
 
 ```cmd
->>> conda env create -f environment.yaml -y
+>>> python -m venv .venv
+>>> .venv\Scripts\activate
+>>> python -m pip install -r requirements-dev.txt
 ```

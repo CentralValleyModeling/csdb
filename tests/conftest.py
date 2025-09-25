@@ -12,11 +12,12 @@ def assets_dir() -> Path:
 
 
 @pytest.fixture(scope="function")
-def temp_database_path(assets_dir: Path) -> Generator[Path, None, None]:
-    created_dir = assets_dir / "created"
-    with tempfile.TemporaryDirectory(dir=created_dir) as DIR:
-        p = Path(DIR) / "temp.db"
-        yield p
+def temp_database_path(
+    tmpdir: Path,
+) -> Generator[Path, None, None]:
+    tmpdir = Path(str(tmpdir))
+    p = tmpdir / "temp.db"
+    yield p
 
 
 @pytest.fixture(scope="session")

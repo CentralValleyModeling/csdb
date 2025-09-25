@@ -1,9 +1,30 @@
+import contextlib
+import os
 from pathlib import Path
 
 import pandas as pd
 import pytest
 
 import csdb
+
+
+@contextlib.contextmanager
+def new_cwd(x: str | Path):
+    if isinstance(x, Path):
+        x = str(x.absolute())
+    d = os.getcwd()
+    os.chdir(x)
+    try:
+        yield
+    finally:
+        os.chdir(d)
+
+
+def test_connect_via_relative_path(temp_database_path: Path):
+    root = temp_database_path.parent.parent
+    with new_cwd(root):
+        client = csdb.Client(temp_database_path.relative_to(root))
+        assert isinstance(client, csdb.Client)
 
 
 def test_default_variables(

@@ -20,6 +20,9 @@
     "duckdb",
     "duckdb-engine",
     "pydantic",
+    "hecdss",
+    "pydsstools",
+    "pyyaml"
   ]
   description = "A SQL tool for interacting with CalSim3 results"
   dynamic = ["version"]
@@ -48,7 +51,8 @@
   omit = [
     "src/csdb/__main__.py",
     "src/csdb/_version.py",
-    "tests/*"
+    "tests/*",
+    "setup.py"
   ]
 
 [tool.distutils.bdist_wheel]
