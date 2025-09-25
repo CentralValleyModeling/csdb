@@ -56,5 +56,5 @@ jobs:
       - name: Store the distribution packages
         uses: actions/upload-artifact@v4
         with:
-          name: csdb-${{ env.CSDB_VERSION }}-${{ matrix.python-version }}-${{ runner.os }}          
+          name: csdb-${{ matrix.python-version }}-${{ runner.os }}          
           path: dist/
