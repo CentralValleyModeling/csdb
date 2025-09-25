@@ -3,6 +3,8 @@
 > [!NOTE]  
 > :construction: This library is still under development, and has no Anaconda or PyPI distribution yet.
 
+[![tests](https://github.com/CentralValleyModeling/csdb/actions/workflows/python-testing.yaml/badge.svg)](https://github.com/CentralValleyModeling/csdb/actions/workflows/python-testing.yaml)
+
 A SQL tool for interacting with CalSim3 results
 
 ## References, How-Tos, and Tutorials
