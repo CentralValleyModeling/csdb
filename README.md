@@ -71,8 +71,10 @@ Begin by cloning the repository:
 git clone https://github.com/CentralValleyModeling/csdb.git
 ```
 
-Then, set up the conda environment with the developer dependencies.
+Then, set up the virtual environment with the developer dependencies.
 
 ```cmd
->>> conda env create -f environment.yaml -y
+>>> python -m venv .venv
+>>> .venv\Scripts\activate
+>>> python -m pip install -r requirements-dev.txt
 ```

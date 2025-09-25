@@ -99,3 +99,7 @@ src/csdb/_version.py
 # IDE Stuff
 .idea
 .vscode
+
+# Virtual environment stuff
+.conda
+.venv
