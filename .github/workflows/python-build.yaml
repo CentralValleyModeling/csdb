@@ -1,4 +1,4 @@
-name: build
+name: python-build
 
 on:
   pull_request:
@@ -29,6 +29,18 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
           cache: 'pip'
+      
+      - name: Get pip cache dir
+        id: pip-cache
+        run: echo "PIP_CACHE_DIR=$(python -m pip cache dir)" >> $GITHUB_ENV
+
+      - name: Cache pip
+        uses: actions/cache@v4
+        with:
+          path: ${{ env.PIP_CACHE_DIR }}
+          key: ${{ runner.os }}-pip-${{ hashFiles('requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-
 
       - name: Install dependencies
         run: |
@@ -46,5 +58,5 @@ jobs:
       - name: Store the distribution packages
         uses: actions/upload-artifact@v4
         with:
-          name: csdb-${{ env.CSDB_VERSION }}          
+          name: csdb-${{ env.CSDB_VERSION }}-${{ matrix.python-version }}-${{ runner.os }}          
           path: dist/
